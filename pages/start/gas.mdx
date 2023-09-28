@@ -1,6 +1,6 @@
-# Prepare Gas
+# Gas Fee Model
 
-To integrate CyberAccount, it's important to understand its gas mechanism. There are several ways for CyberAccount to pay gas fees to execute UserOperations:
+To integrate CyberAccount, it's important to understand its gas fee mechanism. There are several ways for CyberAccount to pay gas fees to execute UserOperations:
 
 ## With CyberPaymaster
 
@@ -10,17 +10,22 @@ We keep a balance for each CyberAccount. Users can [deposit](../sdk/cyber-accoun
 
 When the CyberAccount executes a UserOperation, the gas fee is deducted from the balance of the CyberAccount. If the balance is insufficient, the UserOperation will be rejected.
 
-#### Deposit Conracts
+#### Deposit Contracts
 
-testnet
+Testnet
+
 ```
 0x52B90f8e69aC72fE0F46726eADDA13835Cbb01FA
 ```
-mainnet
+
+Mainnet
+
 ```
 0xcd97405Fb58e94954E825E46dB192b916A45d412
 ```
-abi
+
+ABI
+
 ```json
 [
   {
@@ -31,21 +36,21 @@ abi
     "type": "function"
   }
 ]
-
 ```
-method
+
+Method
+
 ```solidity
 depositTo(address to)
 ```
-params
+
+Params
 | name        | type    | description                            |
 | ----------- | ------- | -------------------------------------- |
 | `to`        | address | the address of the CyberAccount        |
 | `msg.value` | uint256 | the amount of native tokens to deposit |
 
-
-
-### Project Sponsor the Gas Fee
+### Project Gas Fee Sponsorship
 
 We also provide a service for projects to sponsor the gas fee for users. Contact us and provide your preferred sponsor rules. We will help you sponsor the gas fee for users and send the gas bill at the end of each month.
 
