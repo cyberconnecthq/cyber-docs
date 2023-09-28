@@ -1,12 +1,12 @@
 # Overview
 
-CyberApps are web apps in the context of CyberAccount, they are loaded through [**iframe**](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) on the CyberAccount webpage ([wallet.cyber.co](https://wallet.cyber.co)). Cyber apps should also work with other wallets like MetaMask even without the context of CyberApps. With Cyber apps SDK, developers can eaily leverage the functionality of ERC4337 without touching any details of it.
+CyberApps are web apps in the context of CyberAccount, they are loaded through [**iframe**](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) on the CyberAccount website([wallet.cyber.co](https://wallet.cyber.co)). CyberApps should also work with other wallets like MetaMask even without the context of CyberAccount. With CyberApp SDK, developers can eaily leverage the functionality of ERC4337 without touching any details of it.
 
 ![app](./app.jpg)
 
 ## Establish connection
 
-Before performing any operations, CyberApps need to establish a connection with the CyberAccount webpage. To initiate the connection request, simply call `CyberApp.start()`. If the app and CyberAccount are successfully connected, the method will return current user's CyberAccount detail.
+Before performing any operations, CyberApps need to establish a connection with the CyberAccount webpage. To initiate the connection request, simply call `cyberApp.start()`. If the app and CyberAccount are successfully connected, the method will return current user's CyberAccount detail.
 
 ![connection](./connection.jpg)
 
