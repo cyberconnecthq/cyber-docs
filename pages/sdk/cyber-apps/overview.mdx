@@ -1,0 +1,17 @@
+# Overview
+
+Cyber apps are web apps in the context of CyberWallet, they are loaded through [**iframe**](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) in CyberWallet. Cyber apps should also work with other wallets like MetaMask even without the context of CyberWallt. With Cyber apps SDK, developers can eaily leverage the functionality of ERC4337 without touching any details of it.
+
+![app](./app.jpg)
+
+## Establish connection
+
+Before performing any operations, Cyber apps need to establish a connection with CyberWallet. To initiate the connection request, simply call `CyberApp.start()`. If the app and CyberWallet are successfully connected, the method will return `{connected: true}`.
+
+![connection](./connection.jpg)
+
+## Send transaction
+
+Transactions sent from Cyber apps will be delegated to CyberWallet for user to sign. CyberWallet will display a confirmation modal to the user, showing the transaction details. Once the user has reviewed and signed the transaction, CyberWallet will send the transaction and provide the transaction hash back to the Cyber apps.
+
+![transaction](./transaction.jpg)
