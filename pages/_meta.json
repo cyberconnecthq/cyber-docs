@@ -1,4 +1,5 @@
 {
-  "index": "Getting Started",
-  "sdk": "Cyber SDKs"
+  "start": "Getting started",
+  "sdk": "Cyber SDKs",
+  "api": "API Reference"
 }

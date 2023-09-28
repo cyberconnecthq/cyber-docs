@@ -1,0 +1,111 @@
+# Send UserOperation
+
+After gas fee is correctly prepared, we can send the UserOperation to the blockchain. With the help of CyberPaymaster, you can easily set up a UserOperation without knowing the details of the ERC-4337 implementation of UserOperation.
+
+When sending a UserOperation, you need to provide the following parameters:
+| Field     | Type    | Description                                                                                  |
+| --------- | ------- | -------------------------------------------------------------------------------------------- |
+| to        | address | The target address to interact with                                                          |
+| value     | uint256 | The amount of native token to send                                                           |
+| callData  | bytes   | The data to send                                                                             |
+| operation | uint8   | `0` is `call`, `1` is `delegatecall`, defaults to 0. In most cases, it should not be changed |
+
+## Transfer native token
+For example, send `0.1 ETH` from the CyberAccount to `0x2E0446079705B6Bacc4730fB3EDA5DA68aE5Fe4D`, the parameters is as follows:
+```json
+{
+  "to": "0x2E0446079705B6Bacc4730fB3EDA5DA68aE5Fe4D",
+  "value": "100000000000000000",
+  "callData": "0x",
+  "operation": 0
+}
+```
+
+## Transfer ERC-20 token
+For example, send `1 CYBER`(ERC-20) to `0x2E0446079705B6Bacc4730fB3EDA5DA68aE5Fe4D` on Optimism. On Optimism, the `CYBER` token contract address is `0x14778860E937f509e651192a90589dE711Fb88a9`.
+
+The `to` field is `0x14778860E937f509e651192a90589dE711Fb88a9`
+
+The `callData` field is the `transfer(address,uint256)` function call data of `CYBER` token contract
+```solidity
+abi.encodeWithSignature(
+    "transfer(address,uint256)",
+    0x2E0446079705B6Bacc4730fB3EDA5DA68aE5Fe4D,
+    1000000000000000000);
+```
+which results in 
+```
+0xa9059cbb0000000000000000000000002e0446079705b6bacc4730fb3eda5da68ae5fe4d0000000000000000000000000000000000000000000000000de0b6b3a7640000
+``` 
+So the parameters is as follows:
+```json
+{
+  "to": "0x14778860E937f509e651192a90589dE711Fb88a9",
+  "value": "0",
+  "callData": "0xa9059cbb0000000000000000000000002e0446079705b6bacc4730fb3eda5da68ae5fe4d0000000000000000000000000000000000000000000000000de0b6b3a7640000",
+  "operation": 0
+}
+```
+
+
+## Transfer ERC-721 token
+For example, send `1 LINK3 MYSTERY BOX`(ERC-721) with the `tokenId` of `1` from CyberAccount(`0x6651Fa0D314C5b5818d60320C6809f6D5254Fdb9`) to `0x2E0446079705B6Bacc4730fB3EDA5DA68aE5Fe4D` on BSC. On BSC, the `LINK3 MYSTERY BOX` NFT contract address is `0xCAdC6C364E8fcad0F382FDdfd6ff5b41d82EB3e4`.
+
+The `to` field is `0xCAdC6C364E8fcad0F382FDdfd6ff5b41d82EB3e4`
+
+The `callData` field is the `safeTransferFrom(address,address,uint256)` function call data of `LINK3 MYSTERY BOX` NFT contract
+```solidity
+abi.encodeWithSignature(
+    "safeTransferFrom(address,address,uint256)",
+    0x6651Fa0D314C5b5818d60320C6809f6D5254Fdb9,
+    0x2E0446079705B6Bacc4730fB3EDA5DA68aE5Fe4D,
+    1);
+```
+which results in 
+```
+0x42842e0e0000000000000000000000006651fa0d314c5b5818d60320c6809f6d5254fdb90000000000000000000000002e0446079705b6bacc4730fb3eda5da68ae5fe4d0000000000000000000000000000000000000000000000000000000000000001
+```
+So the parameters is as follows:
+```json
+{
+  "to": "0xCAdC6C364E8fcad0F382FDdfd6ff5b41d82EB3e4",
+  "value": "0",
+  "callData": "0x42842e0e0000000000000000000000006651fa0d314c5b5818d60320c6809f6d5254fdb90000000000000000000000002e0446079705b6bacc4730fb3eda5da68ae5fe4d0000000000000000000000000000000000000000000000000000000000000001",
+  "operation": 0
+}
+```
+
+## Transfer ERC-1155 token
+For example, send `10 LINK3 Mini Shards`(ERC-1155) with the `tokenId` of `1` from CyberAccount(`0x6651Fa0D314C5b5818d60320C6809f6D5254Fdb9`) to `0x2E0446079705B6Bacc4730fB3EDA5DA68aE5Fe4D` on BSC.
+On BSC, the `LINK3 Mini Shards` NFT contract address is `0x1bC274C3b3b24ceF54d01AEEB9fFc73Ac0b68936`.
+
+The `to` field is `0x1bC274C3b3b24ceF54d01AEEB9fFc73Ac0b68936`
+
+The `callData` field is the `safeTransferFrom(address,address,uint256,uint256,bytes)` function call data of `LINK3 Mini Shards` NFT contract
+```solidity
+abi.encodeWithSignature(
+    "safeTransferFrom(address,address,uint256,uint256,bytes)",
+    0x6651Fa0D314C5b5818d60320C6809f6D5254Fdb9,
+    0x2E0446079705B6Bacc4730fB3EDA5DA68aE5Fe4D,
+    1,
+    10,
+    new bytes(0));
+```
+which results in 
+```
+f242432a0000000000000000000000006651fa0d314c5b5818d60320c6809f6d5254fdb90000000000000000000000002e0446079705b6bacc4730fb3eda5da68ae5fe4d0000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000000
+```
+So the parameters is as follows:
+```json
+{
+  "to": "0x1bC274C3b3b24ceF54d01AEEB9fFc73Ac0b68936",
+  "value": "0",
+  "callData": "f242432a0000000000000000000000006651fa0d314c5b5818d60320c6809f6d5254fdb90000000000000000000000002e0446079705b6bacc4730fb3eda5da68ae5fe4d0000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000000",
+  "operation": 0
+}
+```
+
+
+## Arbitrary contract call
+
+For arbitrary contract call, just set `to` to the target contract address, and set `callData` to the function call data. Set `value` to the native token amount to send. The `msg.sneder` will be the CyberAccount address in the contract call procedure.
