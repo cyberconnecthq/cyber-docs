@@ -1,6 +1,6 @@
 {
   "erc_4337": "ERC-4337 Overview",
-  "auth": "Auth Model",
-  "gas_mechanism": "Prepare Gas",
+  "auth": "Authentication",
+  "gas": "Prepare Gas",
   "send_userop": "Send UserOperation"
 }

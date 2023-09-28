@@ -1,0 +1,7 @@
+# Authentication
+
+> Currently, only an EOA (Externally Owned Account) can be the owner of a CyberAccount.
+
+In theory, CyberAccount can use any authentication model to verify the owner's identity. However, currently, we use the [`ECDSAValidator`](https://github.com/zerodevapp/kernel/blob/main/src/validator/ECDSAValidator.sol) as the default validator to validate signatures by ZeroDev Kernel Validator.
+
+Each CyberAccount has one owner, and the signature is verified using ECDSA. Therefore, the owner of a CyberAccount cannot be another smart contract wallet because a smart contract wallet cannot sign messages using ECDSA. However, this can be supported by using other validators in the future.

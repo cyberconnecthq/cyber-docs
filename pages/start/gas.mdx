@@ -1,0 +1,19 @@
+# Prepare Gas
+
+To integrate CyberAccount, it's important to understand its gas mechanism. There are several ways for CyberAccount to pay gas fees to execute UserOperations:
+
+## With CyberPaymaster
+
+### Deposit and Spend Gas on Any Chain
+
+We keep a balance for each CyberAccount. Users can [deposit](../sdk/cyber-account.mdx#methods-2) native tokens to our deposit smart contract on any chain. Once the deposit event is indexed, we convert the deposited tokens into US dollars based on the current exchange rate of the native token on the block, and add the resulting amount to the balance of the CyberAccount. Developers can get the credit balance by calling the [`cc_getUserCredit`](../api/paymaster/cc_getUserCredit.mdx) API.
+
+When the CyberAccount executes a UserOperation, the gas fee is deducted from the balance of the CyberAccount. If the balance is insufficient, the UserOperation will be rejected.
+
+### Project Sponsor the Gas Fee
+
+We also provide a service for projects to sponsor the gas fee for users. Contact us and provide your preferred sponsor rules. We will help you sponsor the gas fee for users and send the gas bill at the end of each month.
+
+## Without CyberPaymaster
+
+Users can directly send native tokens to the CyberAccount address. The native token can be used to pay the gas fee for UserOperations if `paymasterAndData` is not set in the UserOperation.
