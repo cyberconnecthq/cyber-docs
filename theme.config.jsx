@@ -3,4 +3,9 @@ export default {
   project: {
     link: "https://github.com/cyberconnecthq/cyber-docs",
   },
+  useNextSeoProps() {
+    return {
+      titleTemplate: '%s – CyberConnect', 
+    }
+  }
 };
