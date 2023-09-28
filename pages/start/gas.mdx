@@ -6,7 +6,7 @@ To integrate CyberAccount, it's important to understand its gas mechanism. There
 
 ### Deposit and Spend Gas on Any Chain
 
-We keep a balance for each CyberAccount. Users can [deposit](../sdk/cyber-account.mdx#methods-2) native tokens to our deposit smart contract on any chain. Once the deposit event is indexed, we convert the deposited tokens into US dollars based on the current exchange rate of the native token on the block, and add the resulting amount to the balance of the CyberAccount. Developers can get the credit balance by calling the [`cc_getUserCredit`](../api/paymaster/cc_getUserCredit.mdx) API.
+We keep a balance for each CyberAccount. Users can [deposit](../sdk/cyber-account.mdx#methods-2) native tokens to our deposit smart contract on any chain. Once the deposit event is indexed, we convert the deposited tokens into US dollars based on the current exchange rate of the native token on the block, and add the resulting amount to the balance of the CyberAccount. Developers can get the credit balance by calling the [`cc_getUserCredit`](../apis/paymaster/cc_getUserCredit.mdx) API.
 
 When the CyberAccount executes a UserOperation, the gas fee is deducted from the balance of the CyberAccount. If the balance is insufficient, the UserOperation will be rejected.
 
@@ -21,8 +21,17 @@ mainnet
 0xcd97405Fb58e94954E825E46dB192b916A45d412
 ```
 abi
-```
-[{"inputs":[{"internalType":"address","name":"owner","type":"address"}],"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"address","name":"from","type":"address"},{"indexed":false,"internalType":"address","name":"to","type":"address"},{"indexed":false,"internalType":"uint256","name":"amount","type":"uint256"}],"name":"Deposit","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"user","type":"address"},{"indexed":true,"internalType":"address","name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"address","name":"to","type":"address"},{"indexed":false,"internalType":"uint256","name":"amount","type":"uint256"}],"name":"Withdraw","type":"event"},{"inputs":[{"internalType":"address","name":"to","type":"address"}],"name":"depositTo","outputs":[],"stateMutability":"payable","type":"function"},{"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"deposits","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"withdraw","outputs":[],"stateMutability":"nonpayable","type":"function"}]
+```json
+[
+  {
+    "inputs": [{ "internalType": "address", "name": "to", "type": "address" }],
+    "name": "depositTo",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  }
+]
+
 ```
 method
 ```solidity
