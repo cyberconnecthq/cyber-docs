@@ -1,0 +1,7 @@
+{
+  "cc_getUserCredit": "cc_getUserCredit",
+  "cc_estimateUserOperation": "cc_estimateUserOperation",
+  "cc_sponsorUserOperation": "cc_sponsorUserOperation",
+  "cc_listPendingUserOperations": "cc_listPendingUserOperations",
+  "cc_rejectUserOperation": "cc_rejectUserOperation"
+}

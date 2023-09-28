@@ -1,1 +1,82 @@
-# API
+# Overview
+
+## CyberBundler URL
+
+mainnet
+
+```
+https://api.stg.cyberconnect.dev/cyberaccount/bundler/v1/rpc?chainId={CHAIN_ID}&appId={APP_ID}
+```
+
+testnet
+
+```
+https://api.stg.cyberconnect.dev/cyberaccount/bundler/v1/rpc?chainId={CHAIN_ID}&appId={APP_ID}
+```
+
+## CyberPaymaster URL
+
+mainnet
+
+```
+https://api.cyberconnect.dev/cyberaccount/paymaster/v1/rpc?chainId={CHAIN_ID}&appId={APP_ID}
+```
+
+testnet
+
+```
+https://api.cyberconnect.dev/cyberaccount/paymaster/v1/rpc?chainId={CHAIN_ID}&appId={APP_ID}
+```
+
+## Supported Chains
+
+mainnet
+| Chain Name | Chain ID |
+| ---------- | -------- |
+| Polygon    | 137      |
+| Base       | 8453     |
+| Linea      | 59144    |
+| Optimism   | 10       |
+| Arbitrum   | 42161    |
+| OpBNB      | 204      |
+
+testnet
+| Chain Name      | Chain ID |
+| --------------- | -------- |
+| Mumbai          | 80001    |
+| Base Goerli     | 84531    |
+| Linea Testnet   | 59140    |
+| Optimism Goerli | 420      |
+| Arbitrum Goerli | 421613   |
+
+## How to get `App ID`
+
+- Generate RSA private key
+
+```bash
+openssl genrsa -out privateKey.pem 2048
+```
+
+- Generate RSA public key
+
+```bash
+openssl rsa -in privateKey.pem -pubout -out publicKey.pem
+```
+
+- Copy the public key content. Example:
+
+```key
+-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0hOCvveqvY/HaKagafqj
+bs0A9n0gJ92WNuPoYjCruh3uFg1T0XynrOWn4DYCLwxhoysXOMqkTalBGF8DCIE/
+/Ga0UpzfrPokUKbIye8BqjgUPB4M+NyLFatCNu+S7wMHlM+gGDkdJB8wMcDLFP0M
+caWNsrtD5fo5d+FMltGFV6cey7EQTOJarPPp2GJSaBTulF0yVFI284eU/DJvLwYl
+yCH0DxGkA5RiUDo7CFNFK+rp59JMnoJzVLaan8g5Xc4HRJvXEU+NDQknwAxkpBmu
+vBrAXCEIBhfYHz3ED8Ff58nIxLAz7VigtVBzi7RPSc/FJhmpYHjcJnWoxiMX9Eeq
+LwIDAQAB
+-----END PUBLIC KEY-----
+```
+
+- For testnet, contact CyberConnect team with your public key and get your `App ID`.
+
+- For mainnet, you need to go to the [CyberConnect Dev Center](https://dashboard.cyberconnect.me/) to create a new app and get your `App ID`. Click the `Edit Auth Key` button to add your public key. Then contact CyberConnect team to approve your app.
