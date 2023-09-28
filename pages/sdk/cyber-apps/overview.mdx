@@ -1,17 +1,17 @@
 # Overview
 
-Cyber apps are web apps in the context of CyberAccount, they are loaded through [**iframe**](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) in CyberAccount. Cyber apps should also work with other wallets like MetaMask even without the context of CyberWallt. With Cyber apps SDK, developers can eaily leverage the functionality of ERC4337 without touching any details of it.
+CyberApps are web apps in the context of CyberAccount, they are loaded through [**iframe**](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) on the CyberAccount webpage ([wallet.cyber.co](https://wallet.cyber.co)). Cyber apps should also work with other wallets like MetaMask even without the context of CyberApps. With Cyber apps SDK, developers can eaily leverage the functionality of ERC4337 without touching any details of it.
 
 ![app](./app.jpg)
 
 ## Establish connection
 
-Before performing any operations, Cyber apps need to establish a connection with CyberAccount. To initiate the connection request, simply call `CyberApp.start()`. If the app and CyberAccount are successfully connected, the method will return `{connected: true}`.
+Before performing any operations, CyberApps need to establish a connection with the CyberAccount webpage. To initiate the connection request, simply call `CyberApp.start()`. If the app and CyberAccount are successfully connected, the method will return current user's CyberAccount detail.
 
 ![connection](./connection.jpg)
 
 ## Send transaction
 
-Transactions sent from Cyber apps will be delegated to CyberAccount for user to sign. CyberAccount will display a confirmation modal to the user, showing the transaction details. Once the user has reviewed and signed the transaction, CyberAccount will send the transaction and provide the transaction hash back to the Cyber apps.
+Transactions sent from CyberApps will be delegated to CyberAccount for user to sign. CyberAccount will display a confirmation modal to the user, showing the transaction details. Once the user has reviewed and signed the transaction, CyberAccount will send the transaction and provide the transaction hash back to the app.
 
 ![transaction](./transaction.jpg)

@@ -25,7 +25,7 @@ if (cyberAccount) {
 }
 ```
 
-### Send a transaction
+### Send a transaction on Optimism
 
 ```typescript
 async function sendTransaction() {
@@ -44,3 +44,55 @@ async function sendTransaction() {
 1. Start your local app server
 2. Go to [CyberAccount Sandbox](https://wallet-sandbox.cyber.co/apps)
 3. Input your app server url
+
+## API Reference
+
+`CyberApp` is the only class you need to create a CyberApp, `CyberWallet` and `CyberAccount` will be created internally.
+
+### CyberApp
+
+`class CyberApp({name, icon})`
+
+### Parameters
+
+- `name` : `string` - CyberApp name
+- `icon` : `string` - CyberApp icon url
+
+### Properties
+
+- `name` : `string` - CyberApp name
+- `icon` : `string` - CyberApp icon url
+- `cyberWallet` : `CyberWallet` - [CyberWallet](#cyberwallet) instance
+
+### Methods
+
+- `start()` - `Promise<CyberAccount>` - Start CyberApp and connect to the CyberAccount web app
+
+## CyberWallet
+
+You can switch between different chains by accessing the chain property of CyberWallet.
+
+```javascript
+
+// Send transaction on Optimism
+cyberWallet.optimism.sendTransaction(...);
+
+// Send transaction on Polygon
+cyberWallet.polygon.sendTransaction(...);
+```
+
+### Properties
+
+- `connected` : `boolean` - Whether the app is connected to CyberAccount
+- `optimism`: `Chain` - Supported chain for CyberAccount
+- `optimismGoerli`: `Chain` - Supported chain for CyberAccount on Goerli testnet
+- `polygon`: `Chain` - Supported chain for CyberAccount
+- `polygonMumbai`: Chain - Supported chain for CyberAccount on Mumbai testnet
+- `arbitrum`: `Chain` - Supported chain for CyberAccount
+- `arbitrumGoerli`: `Chain` - Supported chain for CyberAccount on Goerli testnet
+- `linea`: `Chain` - Supported chain for CyberAccount
+- `lineaTestnet`: `Chain` - Supported chain for CyberAccount on testnet
+- `base`: `Chain` - Supported chain for CyberAccount
+- `baseGoerli`: `Chain` - Supported chain for CyberAccount on Goerli testnet
+- `opBnb`: `Chain` - Supported chain for CyberAccount
+- `opBnbTestnet`: `Chain` - Supported chain for CyberAccount on testnet

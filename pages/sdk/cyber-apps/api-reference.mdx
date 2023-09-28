@@ -1,0 +1,63 @@
+# API Reference
+
+`CyberApp` is the only class you need to create a CyberApp, `CyberWallet` and `CyberAccount` will be created internally.
+
+## CyberApp `Class`
+
+### Parameters
+
+- `name` : `string` - CyberApp name
+- `icon` : `string` - CyberApp icon url
+
+### Properties
+
+- `name` : `string` - CyberApp name
+- `icon` : `string` - CyberApp icon url
+- `cyberWallet` : `CyberWallet` - [CyberWallet](#cyberwallet) instance
+
+### Methods
+
+- `start()` - `Promise<CyberAccount>` - Start CyberApp and connect to the CyberAccount web app
+
+## CyberWallet `Class`
+
+You can switch between different chains by accessing the chain property of CyberWallet.
+
+```javascript
+
+// Send transaction on Optimism
+cyberWallet.optimism.sendTransaction(...);
+
+// Send transaction on Polygon
+cyberWallet.polygon.sendTransaction(...);
+```
+
+### Properties
+
+- `connected` : `boolean` - Whether the app is connected to CyberAccount
+- `optimism`: [Chain](#chain-class) - Supported chain for CyberAccount
+- `optimismGoerli`: [Chain](#chain-class) - Supported chain for CyberAccount on Goerli testnet
+- `polygon`: [Chain](#chain-class) - Supported chain for CyberAccount
+- `polygonMumbai`: [Chain](#chain-class) - Supported chain for CyberAccount on Mumbai testnet
+- `arbitrum`: [Chain](#chain-class) - Supported chain for CyberAccount
+- `arbitrumGoerli`: [Chain](#chain-class) - Supported chain for CyberAccount on Goerli testnet
+- `linea`: [Chain](#chain-class) - Supported chain for CyberAccount
+- `lineaTestnet`: [Chain](#chain-class) - Supported chain for CyberAccount on testnet
+- `base`: [Chain](#chain-class) - Supported chain for CyberAccount
+- `baseGoerli`: [Chain](#chain-class) - Supported chain for CyberAccount on Goerli testnet
+- `opBnb`: [Chain](#chain-class) - Supported chain for CyberAccount
+- `opBnbTestnet`: [Chain](#chain-class) - Supported chain for CyberAccount on testnet
+
+## CyberAccount `Class`
+
+### Properties
+
+- `address` : `string` - Address of the CyberAccount
+- `owner` : `string` - Address of the CyberAccount owner account
+
+## Chain `Class`
+
+### Properties
+
+- `id` : `number` - Chain id
+- `sendTransaction` : `function` - Send transaction on the chain
