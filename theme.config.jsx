@@ -7,5 +7,7 @@ export default {
     return {
       titleTemplate: '%s – CyberConnect', 
     }
-  }
+  },
+
+  docsRepositoryBase: 'https://github.com/cyberconnecthq/cyber-docs/tree/main',
 };
