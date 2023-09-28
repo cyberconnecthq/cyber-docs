@@ -1,5 +1,7 @@
 # ERC-4337: Account Abstraction
 
+> This article is a repost from Stackup's documentation https://docs.stackup.sh/docs/erc-4337-overview
+
 ## Introduction
 
 This page gives a simplified overview of ERC-4337 so that developers can get a basic understanding of the different components and how they can be pieced together to build their applications.
@@ -11,11 +13,12 @@ There are four main components to ERC-4337: a User Operation, Bundler, EntryPoin
 - **UserOperations** are pseudo-transaction objects that are used to execute transactions with contract accounts. These are created by your app.
 - **Bundlers** are actors that package UserOperations from a mempool and send them to the EntryPoint contract on the blockchain.
 - **EntryPoint** is a singleton smart contract that handles the verification and execution logic for transactions.
-Contract Accounts are smart contract accounts owned by a user.
+  Contract Accounts are smart contract accounts owned by a user.
 - **Paymasters** are optional smart contract accounts that can sponsor transactions for Contract Accounts.
 - **Aggregators** are optional smart contracts that can validate signatures for multiple Contract Accounts.
 
 ## User Operations
+
 All components of ERC-4337 revolve around a pseudo-transaction object called a UserOperation which is used to execute actions through a smart contract account. It captures the intent of what the user wants to do. This isn't to be mistaken for a regular transaction type.
 
 | Field                | Type    | Description                                                                                                                                                          |
@@ -35,6 +38,7 @@ All components of ERC-4337 revolve around a pseudo-transaction object called a U
 You will see reference to two phases of ERC-4337: verification and execution. Verification is checking the validity of User Operations, and execution is the actual execution of those transactions.
 
 ## Bundlers
+
 A Bundler is a class of actors that sends User Operations to the EntryPoint. Specifically, it:
 
 - Listens to at least one UserOperation mempool.
@@ -43,28 +47,32 @@ A Bundler is a class of actors that sends User Operations to the EntryPoint. Spe
 - Relays bundles to the EntryPoint.
 
 ## EntryPoint
+
 The EntryPoint is a singleton contract that acts as a central entity for all ERC-4337 Smart Accounts and Paymasters. It coordinates the verification and execution of a User Operation. For this reason, it's important for all implementations of an EntryPoint to be audited and immutable.
 Essentially there are two phases:
 
 - **Verification loop**: Verifies that each UserOperation is valid by checking it with both the Smart Account and the Paymaster contract.
 - **Execution loop**: Sends the callData in each UserOperation to the Smart Account.
-The verification loop will also make sure that either the Smart Account or Paymaster contract can pay the maximum gas cost for each User Operation.
+  The verification loop will also make sure that either the Smart Account or Paymaster contract can pay the maximum gas cost for each User Operation.
 
 Bundlers only check the verification phase. Bundlers do not check if the callData will fully execute.
 
 ## Smart Account
+
 The Smart Account is an end user's account. At minimum it needs to check whether or not it will accept a User Operation during the verification loop.
 
 Additional features to support other account functions like social recovery and multi-operations can be added here too.
 
 ## Paymaster
+
 The Paymaster is an entity that is able to sponsor the gas fees of a UserOperation. It is required to do two things:
 
 - Check whether or not it will accept a User Operation during the verification loop.
 - Run any required fee logic in the execution loop.
-An example of Paymaster logic could be to withdraw a certain amount of ERC-20 tokens from the Smart Account after the UserOperation is executed. This allows users to pay for gas in any currency they choose.
+  An example of Paymaster logic could be to withdraw a certain amount of ERC-20 tokens from the Smart Account after the UserOperation is executed. This allows users to pay for gas in any currency they choose.
 
 ## Aggregator
+
 The Aggregator is an entity that is trusted by Contract Accounts to validate signatures. They are often used to aggregate signatures from multiple UserOperations together.
 
 ## Further Reading
