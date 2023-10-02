@@ -1,22 +1,21 @@
-# CyberAccount Overview
+# CyberWallet Overview
 
-## What is CyberAccount?
+## What is CyberWallet?
 
-CyberAccount is a cross-chain smart contract wallet based on EVM that holds the user's social graph. It utilizes the ERC-4337 (Account Abstraction) technical standard to enable multiple advanced features, including:
+CyberWallet is an ERC-4337-compatible multi-chain smart contract wallet. As the userss all-in-one social account and wallet in web3, it enables a range of advanced features, including:
 
 - **Sponsored Gas Costs**: It provides users with the ability to pay for others' gas costs or delegate payment to a third party.
-- **Account Recovery**: In case of key loss, account security can be distributed among trusted entities or devices.
-- **Batched Transactions**: Account abstraction makes it possible for users to make multiple calls within a single user operation, significantly improving the UX of dapps.
-- **Customizable Security Protocols**: Users can establish flexible security rules tailored to their needs.
-- **Gas cross chains**: Users can deposit gas from other chains to pay for the gas cost of the current chain.
-- etc.
+- **Account Recovery**: To avoid losing your account in cases when the private key or seed phrase can't be recovered, account security can be distributed among trusted entities or devices.
+- **Batch Transactions**: Account abstraction makes it possible for users to make multiple calls within a single user operation, significantly improving the UX of web3 dApps.
+- **Customizable Security**: Users can set up flexible security rules like 2FA/MFA or biometric login to suit that needs.
+- **Use Gas Across Chains**: Use your gas credit on one blockchain to complete a transaction on another. Example: Pay for a transaction on Optimism with Matic and on Polygon with BNB.
 
-## CyberAccount Components
+## CyberWallet Components
 
-- **CyberAccount**: A smart contract wallet that meets the ERC-4337 standard.
-- **CyberPaymaster**: A backend service along with smart contracts that provides sponsored gas costs.
-- **CyberBundler**: A bundler that provides standard ERC-4337 bundler endpoints.
+- **CyberWallet**: An ERC-4337-compatible smart contract wallet.
+- **CyberPaymaster**: A smart contract service to enable flexible gas policies like gas sponsorship and across-chain gas payments.
+- **CyberBundler**: An ERC-4337 bundler service that accepts, bundles and submits `UserOperation`s.
 
-## How to use CyberAccount
+## How to use CyberWallet
 
-You can integrate CyberAccount using either the [SDK](../sdk/cyber-account.mdx) or directly interact with our backend [API](../api/overview.mdx).
+You can integrate CyberWallet using either the [SDK](../sdk/cyber-account.mdx) or directly interact with our backend [API](../api/overview.mdx).
