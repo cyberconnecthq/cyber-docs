@@ -1,0 +1,10 @@
+  nextra-nav-container-blur {
+    display: none;
+  }
+ .nextra-nav-container nav {
+    background: #000;
+  }
+
+  .nextra-hamburger {
+      color: #fff;
+  }
