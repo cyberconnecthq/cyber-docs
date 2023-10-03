@@ -1,64 +1,101 @@
 # API Reference
 
-`CyberApp` is the only class you need to create a CyberApp, `CyberWallet` and `CyberAccount` will be created internally.
+`CyberApp` is the only class you need to create a CyberApp.
 
-## CyberApp `Class`
+## CyberApp
 
-### Parameters
+The `CyberApp` interface provides a way for dapps to interact with CyberWallet.
 
-- `name` : `string` - CyberApp name
-- `icon` : `string` - CyberApp icon url
+### Constructor
 
-### Properties
+```
+CyberApp(options)
+```
 
-- `name` : `string` - CyberApp name
-- `icon` : `string` - CyberApp icon url
-- `cyberWallet` : `CyberWallet` - [CyberWallet](#cyberwallet) instance
+#### Parameters
 
-### Methods
+- `options`
+  - `name` _(string)_ - CyberApp name
+  - `icon` _(string)_ - CyberApp icon url
 
-- `start()` - `Promise<CyberAccount>` - Start CyberApp and connect to the CyberAccount web app
+### Instance Properties
 
-## CyberWallet `Class`
+- `name` _(string)_ - CyberApp name
+- `icon` _(string)_ - CyberApp icon url
+- `cyberWallet` _([CyberWallet](#cyberwallet))_ - CyberWallet instance
+
+### Instance Methods
+
+- `async start()` - Start CyberApp and connect to the CyberAccount web app, returns a [CyberAccount](#cyberaccount) instance
+
+### Examples
+
+```typescript filename="index.ts"
+import { CyberApp } from "@cyberlab/cyber-app-sdk";
+
+const app = new CyberApp({ name: "Your app name", icon: "Your app icon url" });
+```
+
+## CyberWallet
 
 You can switch between different chains by accessing the chain property of CyberWallet.
 
-```javascript
+### Instance Properties
 
-// Send transaction on Optimism
-cyberWallet.optimism.sendTransaction(...);
+- `connected` _(boolean)_ - Whether the app is connected to CyberAccount
+- `optimism`_([Chain](#chain-class))_ - Supported chain for CyberAccount
+- `optimismGoerli`_([Chain](#chain-class))_ - Supported chain for CyberAccount
+- `polygon`_([Chain](#chain-class))_ - Supported chain for CyberAccount
+- `polygonMumbai`_([Chain](#chain-class))_ - Supported chain for CyberAccount
+- `arbitrum`_([Chain](#chain-class))_ - Supported chain for CyberAccount
+- `arbitrumGoerli`_([Chain](#chain-class))_ - Supported chain for CyberAccount
+- `linea`_([Chain](#chain-class))_ - Supported chain for CyberAccount
+- `lineaTestnet`_([Chain](#chain-class))_ - Supported chain for CyberAccount
+- `base`_([Chain](#chain-class))_ - Supported chain for CyberAccount
+- `baseGoerli`_([Chain](#chain-class))_ - Supported chain for CyberAccount
+- `opBnb`_([Chain](#chain-class))_ - Supported chain for CyberAccount
+- `opBnbTestnet`_([Chain](#chain-class))_ - Supported chain for CyberAccount
+- `scrollSepolia`_([Chain](#chain-class))_ - Supported chain for CyberAccount
 
-// Send transaction on Polygon
-cyberWallet.polygon.sendTransaction(...);
+### Examples
+
+#### Send transaction on Optimism
+
+```javascript filename="sendTransaction.ts"
+cyberWallet.optimism.sendTransaction({
+  to: "0x370CA01D7314e3EEa59d57E343323bB7e9De24C6",
+  value: "1000000000000000",
+  data: "0x",
+});
 ```
 
-### Properties
+#### Send transaction on Polygon
 
-- `connected` : `boolean` - Whether the app is connected to CyberAccount
-- `optimism`: [Chain](#chain-class) - Supported chain for CyberAccount
-- `optimismGoerli`: [Chain](#chain-class) - Supported chain for CyberAccount on Goerli testnet
-- `polygon`: [Chain](#chain-class) - Supported chain for CyberAccount
-- `polygonMumbai`: [Chain](#chain-class) - Supported chain for CyberAccount on Mumbai testnet
-- `arbitrum`: [Chain](#chain-class) - Supported chain for CyberAccount
-- `arbitrumGoerli`: [Chain](#chain-class) - Supported chain for CyberAccount on Goerli testnet
-- `linea`: [Chain](#chain-class) - Supported chain for CyberAccount
-- `lineaTestnet`: [Chain](#chain-class) - Supported chain for CyberAccount on testnet
-- `base`: [Chain](#chain-class) - Supported chain for CyberAccount
-- `baseGoerli`: [Chain](#chain-class) - Supported chain for CyberAccount on Goerli testnet
-- `opBnb`: [Chain](#chain-class) - Supported chain for CyberAccount
-- `opBnbTestnet`: [Chain](#chain-class) - Supported chain for CyberAccount on testnet
-- `scrollSepolia`: [Chain](#chain-class) - Supported chain for CyberAccount
+```javascript filename="sendTransaction.ts"
+cyberWallet.polygon.sendTransaction({
+  to: "0x370CA01D7314e3EEa59d57E343323bB7e9De24C6",
+  value: "1000000000000000",
+  data: "0x",
+});
+```
 
-## CyberAccount `Class`
+## CyberAccount
 
-### Properties
+The `CyberAccount` interface holds the information of a user's CyberAccount.
 
-- `address` : `string` - Address of the CyberAccount
-- `owner` : `string` - Address of the CyberAccount owner account
+### Instance Properties
 
-## Chain `Class`
+- `address` _(string)_ - Address of the CyberAccount
+- `owner` _(string)_ - Address of the CyberAccount owner account
 
-### Properties
+## Chain
+
+The `Chain` interface provides the basic chain info and functionalities like `sendTransaction`.
+
+### Instance Properties
 
 - `id` : `number` - Chain id
-- `sendTransaction` : `function` - Send transaction on the chain
+
+### Instance Methods
+
+- `async sendTransaction()` - Send transaction on the chain, returns a transaction hash if it's successful
