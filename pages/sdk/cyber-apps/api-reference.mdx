@@ -16,24 +16,28 @@ CyberApp(options)
 
 - `options`
   - `name` _(string)_ - CyberApp name
-  - `icon` _(string)_ - CyberApp icon url
+  - `icon` _(string)_ - CyberApp icon URL
 
 ### Instance Properties
 
 - `name` _(string)_ - CyberApp name
-- `icon` _(string)_ - CyberApp icon url
+- `icon` _(string)_ - CyberApp icon URL
 - `cyberWallet` _([CyberWallet](#cyberwallet))_ - CyberWallet instance
 
 ### Instance Methods
 
-- `async start()` - Start CyberApp and connect to the CyberAccount web app, returns a [CyberAccount](#cyberaccount) instance
+- `async start()` - Starts the app and connects to the CyberAccount website, returns the user's [CyberAccount](#cyberaccount) info
 
 ### Examples
 
 ```typescript filename="index.ts"
 import { CyberApp } from "@cyberlab/cyber-app-sdk";
 
-const app = new CyberApp({ name: "Your app name", icon: "Your app icon url" });
+const app = new CyberApp({ name: "Example", icon: "icon.png" });
+
+app.start().then((cyberAccount) => {
+  console.log(cyberAccount); // {address: '0x1234...', ownerAddress: '0x1234...'}
+});
 ```
 
 ## CyberWallet
@@ -42,7 +46,7 @@ You can switch between different chains by accessing the chain property of Cyber
 
 ### Instance Properties
 
-- `connected` _(boolean)_ - Whether the app is connected to CyberAccount
+- `connected` _(boolean)_ - Indicates whether the app is connected to CyberAccount
 - `optimism`_([Chain](#chain-class))_ - Supported chain for CyberAccount
 - `optimismGoerli`_([Chain](#chain-class))_ - Supported chain for CyberAccount
 - `polygon`_([Chain](#chain-class))_ - Supported chain for CyberAccount
@@ -59,20 +63,20 @@ You can switch between different chains by accessing the chain property of Cyber
 
 ### Examples
 
-#### Send transaction on Optimism
+#### Transfer native tokens on Optimism
 
 ```javascript filename="sendTransaction.ts"
-cyberWallet.optimism.sendTransaction({
+app.cyberWallet.optimism.sendTransaction({
   to: "0x370CA01D7314e3EEa59d57E343323bB7e9De24C6",
   value: "1000000000000000",
   data: "0x",
 });
 ```
 
-#### Send transaction on Polygon
+#### Transfer native tokens on Polygon
 
 ```javascript filename="sendTransaction.ts"
-cyberWallet.polygon.sendTransaction({
+app.cyberWallet.polygon.sendTransaction({
   to: "0x370CA01D7314e3EEa59d57E343323bB7e9De24C6",
   value: "1000000000000000",
   data: "0x",
@@ -86,7 +90,7 @@ The `CyberAccount` interface holds the information of a user's CyberAccount.
 ### Instance Properties
 
 - `address` _(string)_ - Address of the CyberAccount
-- `owner` _(string)_ - Address of the CyberAccount owner account
+- `ownerAddress` _(string)_ - Address of the CyberAccount owner account
 
 ## Chain
 
@@ -94,8 +98,8 @@ The `Chain` interface provides the basic chain info and functionalities like `se
 
 ### Instance Properties
 
-- `id` : `number` - Chain id
+- `id` _(number)_ - Chain ID
 
 ### Instance Methods
 
-- `async sendTransaction()` - Send transaction on the chain, returns a transaction hash if it's successful
+- `async sendTransaction()` - Sends a transaction on the chain, returns a transaction hash if it's successful

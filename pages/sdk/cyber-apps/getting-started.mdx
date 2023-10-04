@@ -15,24 +15,25 @@ npm install @cyberlab/cyber-app-sdk
 ```typescript
 import { CyberApp } from "@cyberlab/cyber-app-sdk";
 
-const app = new CyberApp({ name: "Your app name", icon: "Your app icon url" });
-const cyberAccount = await app.start();
+const app = new CyberApp({ name: "Example", icon: "icon.png" });
 
-if (cyberAccount) {
-  console.log("Connected to CyberWallet");
-} else {
-  console.log("Connection to CyberWallet failed");
-}
+app.start().then((cyberAccount) => {
+  if (cyberAccount) {
+    console.log("Connected to CyberWallet");
+  } else {
+    console.log("Failed to connect to CyberWallet");
+  }
+});
 ```
 
-### Send a transaction on Optimism
+### Send native tokens on Optimism
 
 ```typescript
 async function sendTransaction() {
   const res = await app?.cyberwallet?.optimism
     .sendTransaction({
-      to: "0x1234134234",
-      value: "0.000000000000000001",
+      to: "0x370CA01D7314e3EEa59d57E343323bB7e9De24C6",
+      value: "0.01",
       data: "0x",
     })
     .catch((err: any) => console.log({ err }));
@@ -43,4 +44,4 @@ async function sendTransaction() {
 
 1. Start your local app server
 2. Go to [CyberWallet Sandbox](http://wallet-sandbox.cyber.co/?_vercel_share=9mH7nlXjAUEU238zCzxJ3fW0TvC2nsX5)
-3. Input your app server url
+3. Input your app server URL
