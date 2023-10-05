@@ -30,7 +30,7 @@ CyberApp(options)
 
 ### Examples
 
-```typescript filename="index.ts"
+```typescript copy filename="index.ts"
 import { CyberApp } from "@cyberlab/cyber-app-sdk";
 
 const app = new CyberApp({ name: "Example", icon: "icon.png" });
@@ -65,7 +65,7 @@ You can switch between different chains by accessing the chain property of Cyber
 
 #### Transfer native tokens on Optimism
 
-```javascript filename="sendTransaction.ts"
+```typescript copy filename="sendTransaction.ts"
 app.cyberWallet.optimism.sendTransaction({
   to: "0x370CA01D7314e3EEa59d57E343323bB7e9De24C6",
   value: "1000000000000000",
@@ -75,7 +75,7 @@ app.cyberWallet.optimism.sendTransaction({
 
 #### Transfer native tokens on Polygon
 
-```javascript filename="sendTransaction.ts"
+```typescript copy filename="sendTransaction.ts"
 app.cyberWallet.polygon.sendTransaction({
   to: "0x370CA01D7314e3EEa59d57E343323bB7e9De24C6",
   value: "1000000000000000",
@@ -103,3 +103,35 @@ The `Chain` interface provides the basic chain info and functionalities like `se
 ### Instance Methods
 
 - `async sendTransaction()` - Sends a transaction on the chain, returns a transaction hash if it's successful
+
+## Error
+
+All errors thrown by the CyberApp SDK are instances of `Error`.
+
+### Instance Properties
+
+- `name` _(string)_ - Error name
+- `details` _(string)_ - Error details
+- `shortMessage` _(string)_ - Short error message
+
+### Common Errors
+
+- Connection error - Thrown when the app connects to the CyberWallet website failed
+
+```json copy
+{
+  "name": "ConnectionError",
+  "details": "<details>",
+  "shortMessage": "Connection failed"
+}
+```
+
+- Send transaction error - Thrown when sending a transaction failed
+
+```json copy
+{
+  "name": "SendTransactionError",
+  "details": "<details>",
+  "shortMessage": "Transaction failed"
+}
+```

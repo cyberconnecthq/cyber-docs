@@ -4,7 +4,7 @@ Create a CyberWallet app easily with CyberApp SDK.
 
 ## Installation
 
-```bash
+```bash copy
 npm install @cyberlab/cyber-app-sdk
 ```
 
@@ -12,7 +12,7 @@ npm install @cyberlab/cyber-app-sdk
 
 ### Connect to CyberWallet
 
-```typescript
+```typescript copy
 import { CyberApp } from "@cyberlab/cyber-app-sdk";
 
 const app = new CyberApp({ name: "Example", icon: "icon.png" });
@@ -28,7 +28,7 @@ app.start().then((cyberAccount) => {
 
 ### Send native tokens on Optimism
 
-```typescript
+```typescript copy
 async function sendTransaction() {
   const res = await app?.cyberwallet?.optimism
     .sendTransaction({
@@ -36,7 +36,7 @@ async function sendTransaction() {
       value: "0.01",
       data: "0x",
     })
-    .catch((err: any) => console.log({ err }));
+    .catch((err: Error) => console.log({ err }));
 }
 ```
 
