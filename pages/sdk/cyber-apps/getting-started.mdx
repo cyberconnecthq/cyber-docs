@@ -45,3 +45,14 @@ async function sendTransaction() {
 1. Start your local app server
 2. Go to [CyberWallet Sandbox](http://wallet-sandbox.cyber.co/?_vercel_share=9mH7nlXjAUEU238zCzxJ3fW0TvC2nsX5)
 3. Input your app server URL
+
+## Production Setup (Required)
+
+import { Callout } from "nextra/components";
+
+<Callout type="warning" emoji="⚠️">
+  Before releasing your CyberApp in production, make sure The `X-Frames-Options`
+  HTTP response header from your app server is not set to `DENY` or
+  `SAMEORIGIN`. Otherwise, your app will not be able to connect to the
+  CyberWallet website.
+</Callout>
