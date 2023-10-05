@@ -135,3 +135,24 @@ All errors thrown by the CyberApp SDK are instances of `Error`.
   "shortMessage": "Transaction failed"
 }
 ```
+
+#### Examples
+
+```typescript copy filename="sendTransaction.ts"
+import { CyberApp, EventError, ErrorType } from "@cyberlab/cyber-app-sdk";
+
+app?.cyberWallet?.polygonMumbai
+  .sendTransaction(
+    {
+      to: address as Hex,
+      value: parseUnits("0.001", 18).toString(),
+      data: "0x",
+    },
+    { description: "Transfering native tokens" }
+  )
+  .catch((err: EventError) => {
+    if (err.name === ErrorType.SendTransactionError) {
+      console.log(err.shortMessage); // Transaction failed
+    }
+  });
+```
