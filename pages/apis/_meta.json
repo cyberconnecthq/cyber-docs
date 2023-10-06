@@ -1,5 +1,6 @@
 {
   "overview": "Overview",
-  "bundler": "Bundler",
-  "paymaster": "Paymaster"
+  "auth": "Authentication",
+  "bundler": "Bundler Endpoints",
+  "paymaster": "Paymaster Endpoints"
 }
