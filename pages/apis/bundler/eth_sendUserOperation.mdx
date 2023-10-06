@@ -7,7 +7,7 @@ request example
 ```json
 {
   "jsonrpc": "2.0",
-  "id": 1,
+  "id": 0,
   "method": "eth_sendUserOperation",
   "params": [
     {
@@ -32,8 +32,10 @@ response exmaple
 
 ```json
 {
-  "id": 1,
+  "id": 0,
   "jsonrpc": "2.0",
   "result": "0x3356e0dc28511337610d66f2c9e957b9512f8e360447085586eaadece2bf2bdb"
 }
 ```
+
+The result is `UserOperationHash`.

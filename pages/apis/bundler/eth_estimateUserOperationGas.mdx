@@ -1,3 +1,41 @@
 # eth_estimateUserOperationGas
 
 Estimate the gas required for a user operation.
+
+request example
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 0,
+  "method": "eth_estimateUserOperationGas",
+  "params": [
+    {
+      "sender": "0x2182D43B94554b3f2BfE75d23f522f46d4B2d10a",
+      "nonce": "0xab23459a32d74235812977bd5de27fb10000000000000000",
+      "initCode": "0x",
+      "callData": "0x519454470000000000000000000000002182d43b94554b3f2bfe75d23f522f46d4b2d10a0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "callGasLimit": "0x0",
+      "verificationGasLimit": "0x0",
+      "preVerificationGas": "0x0",
+      "maxFeePerGas": "0x77359a4",
+      "maxPriorityFeePerGas": "0x7735940",
+      "paymasterAndData": "0x",
+      "signature": "0x00000000870fe151d548a1c527c3804866fab30abf28ed17b79d5fc5149f19ca0819fefc3c57f3da4fdf9b10fab3f2f3dca536467ae44943b9dbb8433efe7760ddd72aaa1c"
+    },
+    "0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789"
+  ]
+}
+```
+
+response example
+```json
+{
+  "id": 0,
+  "jsonrpc": "2.0",
+  "result": {
+    "preVerificationGas": "0xac44",
+    "verificationGasLimit": "0x18e4b",
+    "callGasLimit": "0x238c"
+  }
+}
+```
