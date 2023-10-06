@@ -1,3 +1,30 @@
 # cc_rejectUserOperation 🔒
 
 > "Authorization" header required with a valid JWT token
+
+Rejects a pending user operation.
+
+request example
+
+```json
+{
+  "method": "cc_rejectUserOperation",
+  "params": [
+    "0xb905da41a1aa6d5359c90234a4716dd0c1335cf1c2b4bcd2355cefde2eba9f1f"
+  ],
+  "id": 2,
+  "jsonrpc": "2.0"
+}
+```
+
+response exmaple
+
+```json
+{
+  "id": 2,
+  "jsonrpc": "2.0",
+  "result": {
+    "success": true
+  }
+}
+```

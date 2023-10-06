@@ -1,1 +1,26 @@
 # cc_getUserCredit
+
+Returns current credit of a user. The balance unit is USD with 6 decimals.
+
+For exmaple. "0xF4240" equals to 1 USD.
+
+request example
+```json
+{
+  "method": "cc_getUserCredit",
+  "params": ["0x2182D43B94554b3f2BfE75d23f522f46d4B2d10a"],
+  "id": 0,
+  "jsonrpc": "2.0"
+}
+```
+
+response example
+```json
+{
+  "id": 0,
+  "jsonrpc": "2.0",
+  "result": {
+    "balance": "0x661067b"
+  }
+}
+```
