@@ -1,0 +1,65 @@
+# Query CyberID Holdings
+
+
+## GraphQL
+
+request example
+```graphql
+query {
+  wallet(address: "0xD9c208dB8d08365916C35473b97A390dDAA551B2", chainId: 10) {
+    cyberIds {
+      totalCount
+      pageInfo {
+        hasNextPage
+        hasPreviousPage
+        startCursor
+        endCursor
+      }
+      edges {
+        node {
+          tokenId
+          name
+          metadata {
+            key
+            value
+          }
+        }
+        cursor
+      }
+    }
+  }
+}
+```
+
+response example
+```graphql
+{
+  "data": {
+    "wallet": {
+      "cyberIds": {
+        "totalCount": 1,
+        "pageInfo": {
+          "hasNextPage": false,
+          "hasPreviousPage": false,
+          "startCursor": "gaFp0wAAAAIAAAAD",
+          "endCursor": "gaFp0wAAAAIAAAAD"
+        },
+        "edges": [
+          {
+            "node": {
+              "tokenId": "85399087058221196933735331368181146816035410356131591160153355702122418658771",
+              "name": "pengdeng.cyber",
+              "metadata": []
+            },
+            "cursor": "gaFp0wAAAAIAAAAD"
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+## ON CHAIN
+
+> Due to ERC-721 standard limitations, we can't get all CyberIDs that are owned by a user.
