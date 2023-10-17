@@ -115,6 +115,28 @@ Sending ERC20 tokens is different from sending the native token, it requires two
 - `value` - The amount of native token to send, it should be 0
 - `data` - The encoded ERC20 token transaction detail
 
+### Sending Batch Transaction
+
+```javascript
+cyberAccount.sendTransaction([
+  {
+    to: "0x1e6754b227c6ae4b0ca61d82f79d60660737554a",
+    value: parseUnits("0.0001", 18),
+    data: "0x",
+  },
+  {
+    to: "0x1e6754b227c6ae4b0ca61d82f79d60660737554a",
+    value: parseUnits("0.0002", 18),
+    data: "0x",
+  },
+  {
+    to: "0x1e6754b227c6ae4b0ca61d82f79d60660737554a",
+    value: parseUnits("0.0003", 18),
+    data: "0x",
+  },
+]);
+```
+
 ---
 
 ## CyberAccount
