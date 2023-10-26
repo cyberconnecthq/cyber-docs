@@ -3,6 +3,7 @@
 ## GraphQL
 
 request example
+
 ```graphql
 query {
   cyberIdByName(name: "pengdeng.cyber") {
@@ -11,15 +12,12 @@ query {
     owner {
       address
     }
-    metadata {
-      key
-      value
-    }
   }
 }
 ```
 
 response example
+
 ```graphql
 {
   "data": {
@@ -28,14 +26,14 @@ response example
       "name": "pengdeng.cyber",
       "owner": {
         "address": "0xD9c208dB8d08365916C35473b97A390dDAA551B2"
-      },
-      "metadata": []
+      }
     }
   }
 }
 ```
 
 ## ON CHAIN
+
 ```solidity
 // remove the `.cyber` suffix to get the tokenId
 uint256 tokenId = getTokenId("pengdeng");
