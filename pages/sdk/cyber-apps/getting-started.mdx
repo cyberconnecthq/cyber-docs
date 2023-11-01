@@ -15,6 +15,11 @@ There are two ways to create a CyberApp:
 1. (Experimental) using `CyberProvider` and `CyberApp` to create a EIP-1193 provider with existing Ethereum libraries like wagmi.
 2. using `CyberApp` directly
 
+<Callout type="info" emoji="ℹ️">
+  Before using the SDK, please go to [Cyber Dev
+  Center](https://dashboard.cyberconnect.me/) to create an APP ID for your app.
+</Callout>
+
 ### 1. Using with wagmi (experimental)
 
 <Callout type="warning" emoji="⚠️">
@@ -33,8 +38,9 @@ let cyberProvider: CyberProvider | undefined;
 
 if (typeof window !== "undefined") {
   const app = new CyberApp({
-    name: "My app",
-    icon: "https://icon.com",
+    appId: "your app id", // required
+    name: "My app", // required
+    icon: "https://icon.com", // required
   });
 
   // cyberwallet provider
@@ -62,7 +68,11 @@ const cyberWalletConnector = new InjectedConnector({
 ```typescript copy
 import { CyberApp } from "@cyberlab/cyber-app-sdk";
 
-const app = new CyberApp({ name: "Example", icon: "icon.png" });
+const app = new CyberApp({
+  appId: "your app id", // required
+  name: "My app", // required
+  icon: "https://icon.com", // required
+});
 
 app.start().then((cyberAccount) => {
   if (cyberAccount) {
