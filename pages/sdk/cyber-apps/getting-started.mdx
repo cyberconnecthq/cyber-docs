@@ -96,11 +96,7 @@ The SDK provides a helper function to check if your app is running in CyberWalle
 ```typescript copy
 import { isCyberWallet } from "@cyberlab/cyber-app-sdk";
 
-//for testnet
-const isCyberWallet = isCyberWallet({ testnet: true });
-
-// for mainnet
-const isCyberWallet = isCyberWallet();
+isCyberWallet(); // true or false
 ```
 
 ## Run your local app in CyberWallet Sandbox
