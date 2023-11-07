@@ -89,6 +89,20 @@ async function sendTransaction() {
 }
 ```
 
+## Check if your app is running in CyberWallet
+
+The SDK provides a helper function to check if your app is running in CyberWallet.
+
+```typescript copy
+import { isCyberWallet } from "@cyberlab/cyber-app-sdk";
+
+//for testnet
+const isCyberWallet = isCyberWallet({ testnet: true });
+
+// for mainnet
+const isCyberWallet = isCyberWallet();
+```
+
 ## Run your local app in CyberWallet Sandbox
 
 1. Start your local app server
