@@ -12,7 +12,7 @@ npm install @cyberlab/cyber-app-sdk
 
 There are two ways to create a CyberApp:
 
-1. using `CyberProvider` and `CyberApp` to create a EIP-1193 provider with existing Ethereum libraries like wagmi.
+1. (Beta) using `cyberWalletConnector` with wagmi
 2. using `CyberApp` directly
 
 <Callout type="info" emoji="ℹ️">
@@ -21,36 +21,26 @@ There are two ways to create a CyberApp:
 </Callout>
 
 ### 1. Using `CyberProvider`
+<Callout type="info" emoji="ℹ️">
+Please Update the SDK to the beta version to use `cyberWalletConnector`
+</Callout>
+
+```bash copy
+npm install @cyberlab/cyber-app-sdk@beta
+```
 
 ```typescript copy
-import { CyberApp, CyberProvider } from "@cyberlab/cyber-app-sdk";
-import { InjectedConnector } from "wagmi/connectors/injected";
+import { CyberWalletConnector } from "@cyberlab/cyber-app-sdk";
 
-let cyberProvider: CyberProvider | undefined;
-
-if (typeof window !== "undefined") {
-  const app = new CyberApp({
-    appId: "your app id", // required
-    name: "My app", // required
-    icon: "https://icon.com", // required
-  });
-
-  // cyberwallet provider
-  const cyberProvider = new CyberProvider({
-    app: app,
-    chainId: optimismGoerli.id, // default chain ID
-  });
-}
-
-const cyberWalletConnector = new InjectedConnector({
+const connector = new CyberWalletConnector({
   chains,
   options: {
-    name: "CyberWallet",
-    getProvider: () => {
-      return cyberProvider;
-    },
+    name: "<app name>", // required
+    icon: "<app icon>", // required
+    appId: "<app id>", required
   },
 });
+
 ```
 
 ### 2. Using with CyberApp Directly
