@@ -1,0 +1,9 @@
+{
+  "foundry": "Foundry",
+  "hardhat": "Hardhat",
+  "remix": "Remix",
+  "ethers": "Ethers.js",
+  "web3": "Web3.js",
+  "wagmi": "Wagmi",
+  "aa": "Account Abstraction"
+}
