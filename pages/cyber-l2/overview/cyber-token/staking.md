@@ -8,7 +8,7 @@ The launch of the Cyber as a Layer 2 solution on the Ethereum network introduces
 
 **Governance**
 
-CYBER stakers along with CYBER holders can propose and vote on Cyber DAO’s governance proposals on the use of community treasury, protocol upgrades, and council members.
+CYBER stakers along with CYBER holders can propose and vote on governance proposals on the use of community treasury, protocol upgrades, and council members.
 
 **Network Security**
 
