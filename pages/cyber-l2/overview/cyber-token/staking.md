@@ -2,7 +2,7 @@
 
 _Staking is not available in restricted countries, including the US, Canada, China, Iran, North Korea, the Syrian Arab Republic, and Cuba._
 
-The launch of the Cyber as a Layer 2 solution on the Ethereum network introduces Cyber Staking, a transformative feature that enables users to stake CYBER tokens, thereby securing the network by adding additional nodes to process transactions, earning voting rights in CyberDAO, and receiving economic rewards. This innovative mechanism not only bolsters network security but also democratizes governance, allowing users to actively participate in decision-making processes.
+The launch of the Cyber as a Layer 2 solution on the Ethereum network introduces Cyber Staking, a transformative feature that enables users to stake CYBER tokens, thereby securing the network by adding additional nodes to process transactions, earning voting rights, and receiving economic rewards. This innovative mechanism not only bolsters network security but also democratizes governance, allowing users to actively participate in decision-making processes.
 
 - Before the Cyber mainnet launch, staked CYBER cannot be unstaked. After the mainnet launch, the unstake process, which is at a CYBER holder’s discretion, will take 21 days.
 
