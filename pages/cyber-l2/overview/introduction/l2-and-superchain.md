@@ -1,0 +1,3 @@
+### Cyber L2 and Optimism Superchain
+
+Cyber commits to Optimism Superchain to provide the social infrastructure for the entire Superchain ecosystems. Existing users from Superchain L2s can tap into social data on Cyber. Cyber is uniquely positioned to aggressively experiment with native-AA, passkey curve precompile, gas sponsorship, and other economic designs on social data. And so it helps enable social networking features across the whole Superchain ecosystem and brings the next wave of mass users on-chain. Users onboarded with applications deployed on Cyber can also access the entire on-chain economy across the Superchain ecosystem.
