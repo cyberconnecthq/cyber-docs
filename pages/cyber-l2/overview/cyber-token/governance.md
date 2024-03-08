@@ -1,6 +1,6 @@
-### **Governance**
+### Governance
 
-CYBER stakers and CYBER holders are responsible for submitting, deliberating, and voting on governance proposals. CYBER holders can either vote directly or delegate their voting power to an eligible third party. CYBER stakers can vote directly using CYBER staked. However, this should not be the case indefinitely. When decentralized node operators (previously mentioned AVS operators) go online, they should vote using all the CYBER staked to them respectively. 
+CYBER stakers and CYBER holders are responsible for submitting, deliberating, and voting on governance proposals. CYBER holders can either vote directly or delegate their voting power to an eligible third party. CYBER stakers can vote directly using CYBER staked. However, this should not be the case indefinitely. When decentralized node operators (previously mentioned AVS operators) go online, they should vote using all the CYBER staked to them respectively.
 
 Specialized councils are formed with high-context delegates to streamline processes and make high-context judgments. The first council created is the Grants Council. A well-constructed grants program is a great way to accelerate the ecosystem's growth and attract high-quality builders. This program will establish a Grants Council of 4 members with a [CharmVerse](https://charmverse.io/) program manager. All grant proposals will follow a separate process different than described below.
 
@@ -30,8 +30,8 @@ All CYBER stakers, CYBER holders, and delegates are invited to vote on proposals
 
 The proposal is approved if it satisfies the following minimum vote thresholds:
 
-1. Quorum: The minimum number of total votes required to be cast. A quorum is measured as *a % of the non-excluded votes.* CYBER holders can exclude their vote by delegating to a special address. The primary use case is the CYBER community treasury.
-2. Approval Threshold: The minimum number of votes to be cast in favor of approving a proposal. The approval threshold for each proposal is measured *as % of votes cast to approve relative to the total number of yes/no votes cast in connection with a proposal.*
+1. Quorum: The minimum number of total votes required to be cast. A quorum is measured as _a % of the non-excluded votes._ CYBER holders can exclude their vote by delegating to a special address. The primary use case is the CYBER community treasury.
+2. Approval Threshold: The minimum number of votes to be cast in favor of approving a proposal. The approval threshold for each proposal is measured _as % of votes cast to approve relative to the total number of yes/no votes cast in connection with a proposal._
 
 **Protocol Upgrades**
 
