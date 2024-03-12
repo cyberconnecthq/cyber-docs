@@ -39,5 +39,17 @@ export default {
         .
       </span>
     )
+  },
+  sidebar: {
+    defaultMenuCollapseLevel: 1,
+    autoCollapse: true,
+    titleComponent({ title, type }) {
+      if (type === 'separator') {
+        return (
+          <div style={{  fontWeight: 700 }}>{title}</div>
+        )
+      }
+      return <>{title}</>
+    }
   }
 };

@@ -8,3 +8,7 @@
   .nextra-hamburger {
       color: #fff;
   }
+  
+  :is([dir=ltr] .ltr\:before\:nx-left-0):before {
+    display: none;
+  }
