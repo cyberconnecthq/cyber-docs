@@ -1,7 +1,8 @@
 import { defineConfig } from "vocs";
 
 export default defineConfig({
-  title: "Cyber",
+  title: "Cyber Docs",
+  titleTemplate: "%s – Cyber Docs",
   sidebar: {
     "/": [
       { text: "Introduction", link: "/" },
