@@ -1,0 +1,59 @@
+# Gas Fee Model
+
+To integrate CyberWallet, it's important to understand its gas fee mechanism. There are several ways for CyberWallet to pay gas fees to execute UserOperations:
+
+## With CyberPaymaster
+
+### Deposit and Spend Gas on Any Chain
+
+We keep a balance for each CyberWallet. Users can [deposit](../sdk/cyber-account.mdx#methods-2) native tokens to our deposit smart contract on any chain. Once the deposit event is indexed, we convert the deposited tokens into US dollars based on the current exchange rate of the native token on the block, and add the resulting amount to the balance of the CyberWallet. Developers can get the credit balance by calling the [`cc_getUserCredit`](/api-reference/paymaster/cc_getUserCredit) API.
+
+When the CyberWallet executes a UserOperation, the gas fee is deducted from the balance of the CyberWallet. If the balance is insufficient, the UserOperation will be rejected.
+
+#### Deposit Contracts
+
+Testnet
+
+```
+0xcd97405Fb58e94954E825E46dB192b916A45d412
+```
+
+Mainnet
+
+```
+0xcd97405Fb58e94954E825E46dB192b916A45d412
+```
+
+ABI
+
+```json
+[
+  {
+    "inputs": [{ "internalType": "address", "name": "to", "type": "address" }],
+    "name": "depositTo",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  }
+]
+```
+
+Method
+
+```solidity
+depositTo(address to)
+```
+
+Params
+| name        | type    | description                            |
+| ----------- | ------- | -------------------------------------- |
+| `to`        | address | the address of the CyberWallet         |
+| `msg.value` | uint256 | the amount of native tokens to deposit |
+
+### Project Gas Fee Sponsorship
+
+We also provide a service for projects to sponsor the gas fee for users. Contact us and provide your preferred sponsor rules. We will help you sponsor the gas fee for users and send the gas bill at the end of each month.
+
+## Without CyberPaymaster
+
+Users can directly send native tokens to the CyberWallet address. The native token can be used to pay the gas fee for UserOperations if `paymasterAndData` is not set in the UserOperation.

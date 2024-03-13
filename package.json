@@ -3,19 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "dev": "vocs dev",
+    "build": "vocs build",
+    "start": "vocs start"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "next": "^13.5.3",
-    "nextra": "^2.13.1",
-    "nextra-theme-docs": "^2.13.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "vocs": "1.0.0-alpha.43"
   }
 }

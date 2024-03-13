@@ -1,0 +1,98 @@
+# Authentication
+
+To protect CyberWallet users, you need to authenticate your users. CyberConnect provides a simple authentication mechanism based on [JWT](https://jwt.io/).
+
+## Get your `App ID`
+
+- Generate RSA private key
+
+```bash
+openssl genrsa -out privateKey.pem 2048
+```
+
+- Generate RSA public key
+
+```bash
+openssl rsa -in privateKey.pem -pubout -out publicKey.pem
+```
+
+- Copy the public key content. Example:
+
+```shell
+-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0hOCvveqvY/HaKagafqj
+bs0A9n0gJ92WNuPoYjCruh3uFg1T0XynrOWn4DYCLwxhoysXOMqkTalBGF8DCIE/
+/Ga0UpzfrPokUKbIye8BqjgUPB4M+NyLFatCNu+S7wMHlM+gGDkdJB8wMcDLFP0M
+caWNsrtD5fo5d+FMltGFV6cey7EQTOJarPPp2GJSaBTulF0yVFI284eU/DJvLwYl
+yCH0DxGkA5RiUDo7CFNFK+rp59JMnoJzVLaan8g5Xc4HRJvXEU+NDQknwAxkpBmu
+vBrAXCEIBhfYHz3ED8Ff58nIxLAz7VigtVBzi7RPSc/FJhmpYHjcJnWoxiMX9Eeq
+LwIDAQAB
+-----END PUBLIC KEY-----
+```
+
+- For testnet, contact CyberConnect team with your public key and get your `App ID`.
+
+- For mainnet, you need to go to the [CyberConnect Dev Center](https://dashboard.cyberconnect.me/) to create a new app and get your `App ID`. Click the `Edit Auth Key` button to add your public key. Then contact CyberConnect team to approve your app.
+
+## Generate JWT token
+
+### Prepare a jwt payload that contains the following fields: 
+```json
+{
+  "iss": "string",
+  "iat": number,
+  "exp": number,
+  "aid": "string",
+  "sender": "string"
+}
+```
+| Field  | Type   | Description                         | Example                                    |
+| ------ | ------ | ----------------------------------- | ------------------------------------------ |
+| iss    | string | Issuer name                         | CyberConnect                               |
+| iat    | number | Issue at, timestamp in second       | 1696560649                                 |
+| exp    | number | Expire at, timestamp in second      | 1697165449                                 |
+| aid    | string | App ID from CyberConnect dev center | b842650a-3567-aaaa-aaaa-9e3e1f1b65af       |
+| sender | string | CyberWallet address                 | 0xd16875f5932fA3e00c664814EE7AbA56C6F0df8C |
+
+### Sign the payload with your private key and get the signature. Example:
+
+```go
+func GenerateJwtSig() string {
+    pemData, err := ioutil.ReadFile("./privateKey.pem")
+    if err != nil {
+        panic(err)
+    }
+    jwtSk, err := jwt.ParseRSAPrivateKeyFromPEM(pemData)
+    if err != nil {
+        panic(err)
+    }
+    payload := struct {
+        Sender string `json:"sender"`
+        AppId  string `json:"aid"`
+        jwt.StandardClaims
+    }{
+        Sender: "0xd16875f5932fA3e00c664814EE7AbA56C6F0df8C",
+        AppId:  "b842650a-3567-aaaa-aaaa-9e3e1f1b65af",
+        StandardClaims: jwt.StandardClaims{
+            ExpiresAt: time.Now().UTC().AddDate(0, 0, 7).Unix(),
+            IssuedAt:  time.Now().UTC().Unix(),
+            Issuer:    "CyberConnect",
+        },
+    }
+    token := jwt.NewWithClaims(jwt.SigningMethodRS256, payload)
+    return token.SignedString(jwtSk)
+}
+```
+
+exmple output:
+```
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZW5kZXIiOiIweDBmNDMyOEE2OEE4ZjBhNWExYzdkQmQ5MkExRDAyZjM0NDE5MzdEMjgiLCJhaWQiOiJhYjIzNDU5YS0zMmQ3LTQyMzUtODEyOS03N2JkNWRlMjdmYjEiLCJpc3MiOiJDeWJlckNvbm5lY3QiLCJleHAiOjIwMDg2NTU2MzksImlhdCI6MTY5MzI5NTYzOX0.kRneNtMAR84CCpo-VXnrMwLhQXTphPVEA_4wp-QN-qXKxPscLy3ZNS2JnDMmPVhJgkroOscZWFvTb0YfjZOwXQ
+```
+
+### Set the `Authorization` header with the signature along with `Bearer` prefix. Example:
+
+```
+"Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZW5kZXIiOiIweDBmNDMyOEE2OEE4ZjBhNWExYzdkQmQ5MkExRDAyZjM0NDE5MzdEMjgiLCJhaWQiOiJhYjIzNDU5YS0zMmQ3LTQyMzUtODEyOS03N2JkNWRlMjdmYjEiLCJpc3MiOiJDeWJlckNvbm5lY3QiLCJleHAiOjIwMDg2NTU2MzksImlhdCI6MTY5MzI5NTYzOX0.kRneNtMAR84CCpo-VXnrMwLhQXTphPVEA_4wp-QN-qXKxPscLy3ZNS2JnDMmPVhJgkroOscZWFvTb0YfjZOwXQ"
+```
+
+### Send the request to CyberPaymaster

@@ -1,0 +1,21 @@
+# CyberWallet Overview
+
+## What is CyberWallet?
+
+CyberWallet is an ERC-4337-compatible multi-chain smart contract wallet. As the userss all-in-one social account and wallet in web3, it enables a range of advanced features, including:
+
+- **Sponsored Gas Costs**: It provides users with the ability to pay for others' gas costs or delegate payment to a third party.
+- **Account Recovery**: To avoid losing your account in cases when the private key or seed phrase can't be recovered, account security can be distributed among trusted entities or devices.
+- **Batch Transactions**: Account abstraction makes it possible for users to make multiple calls within a single user operation, significantly improving the UX of web3 dApps.
+- **Customizable Security**: Users can set up flexible security rules like 2FA/MFA or biometric login to suit that needs.
+- **Use Gas Across Chains**: Use your gas credit on one blockchain to complete a transaction on another. Example: Pay for a transaction on Optimism with Matic and on Polygon with BNB.
+
+## CyberWallet Components
+
+- **CyberWallet**: An ERC-4337-compatible smart contract wallet.
+- **CyberPaymaster**: A smart contract service to enable flexible gas policies like gas sponsorship and across-chain gas payments.
+- **CyberBundler**: An ERC-4337 bundler service that accepts, bundles and submits `UserOperation`s.
+
+## How to use CyberWallet
+
+You can integrate CyberWallet using either the [SDK](/sdk/cyber-account) or directly interact with our backend [API](/api-reference/overview.mdx).
