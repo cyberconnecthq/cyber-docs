@@ -207,7 +207,7 @@ export default defineConfig({
     ],
   },
   topNav: [
-    { text: "SDK & API", link: "/sdk/cyber-account" },
+    { text: "SDKs", link: "/sdk/cyber-account" },
     { text: "CyberWallet", link: "/cyber-wallet/overview" },
     { text: "CyberID", link: "/cyber-id/overview" },
   ],
