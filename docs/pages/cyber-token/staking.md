@@ -1,4 +1,4 @@
-### Cyber Staking = Governance + Network Security + Economic Rewards
+# Cyber Staking = Governance + Network Security + Economic Rewards
 
 _Staking is not available in restricted countries, including the US, Canada, China, Iran, North Korea, the Syrian Arab Republic, and Cuba._
 

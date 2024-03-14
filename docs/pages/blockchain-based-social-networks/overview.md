@@ -1,4 +1,4 @@
-## Blockchain-based social networks
+# Overview
 
 Social networks are among the most important platforms on the internet today, with the five largest generating about $150 billion annually. However, strong network effects have trapped users within the confines of Big Tech's walled gardens, maintaining a take rate as high as 99%.
 

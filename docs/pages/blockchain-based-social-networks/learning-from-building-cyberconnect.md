@@ -1,4 +1,4 @@
-### Learning from building CyberConnect
+# Learning from building CyberConnect
 
 CyberConnect has been developing decentralized social networks since [2021](https://mirror.xyz/cyberlab.eth/k3pL5s2G3Emdz2iguhypcY3HPJaZLkC7SNB8XjgPkm0), backed by $25M in funding from Multicoin, Binance Lab, Animoca Brands, Hashed, The Spartan Groups, Delphi Digital, and many others. Our flagship product, Link3, along with hundreds of third-party apps, is built on the CyberConnect Social Graph Protocol. After recording over 2 million users completing more than 20 million transactions and spending over $2.6 million on gas fees, we've identified the main challenges facing developers building on a blockchain-based social network.
 

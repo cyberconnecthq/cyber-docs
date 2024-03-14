@@ -1,4 +1,4 @@
-### Op Stack
+# OP Stack
 
 The [OP Stack](http://optimism.io/) is the standardized, shared, and open-source development stack that powers Optimism, maintained by the Optimism Collective. Cyber L2 is built on OP Stack with benefit of modularity and standardization. With that, builders can develop based on existing modules and exponentially speed up the growth of the ecosystem. Also, Cyber L2 customizes the Data Availability layer in this stack to reduce transaction costs significantly (details in the EigenDA section).
 

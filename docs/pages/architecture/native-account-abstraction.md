@@ -1,4 +1,4 @@
-### Native Account Abstraction
+# Native Account Abstraction
 
 The upgrade from externally owned accounts (EOAs) to smart contract accounts will unlock countless UX benefits, such as seedless experience, flexible gas fee delegation, batch transactions, and programmable accounts.
 

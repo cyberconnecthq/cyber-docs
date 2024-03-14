@@ -1,3 +1,0 @@
-### Stage 1 (Q2 2024): Testnet with Governance Framework
-
-During this initial stage, our primary objective is to establish the fundamental infrastructure for Cyber L2. This entails the deployment of essential components such as RPC nodes, bridges, data oracle, a blockchain explorer, and developer tools like Foundry, all of which will be made accessible for developers to utilize and innovate upon. Concurrently, the development and implementation of the Cyber governance framework are paramount. Features including voting mechanisms, grant allocation, and the structuring of a governance must be meticulously set up to ensure the rapid expansion of our ecosystem in the future.

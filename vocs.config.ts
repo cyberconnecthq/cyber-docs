@@ -5,26 +5,40 @@ export default defineConfig({
   titleTemplate: "%s – Cyber Docs",
   sidebar: {
     "/": [
-      { text: "Introduction", link: "/" },
-      { text: "Build on Cyber L2", link: "/build-on-l2" },
       {
-        text: "Cyber L2 & Optimism Superchain",
-        link: "/cyber-l2-and-superchain",
+        text: "Introduction",
+        collapsed: false,
+        items: [
+          { text: "Cyber L2", link: "/" },
+          {
+            text: "What can be built on Cyber L2",
+            link: "/what-can-be-built-on-cyber-l2",
+          },
+          {
+            text: "Cyber L2 & Optimism Superchain",
+            link: "/cyber-l2-and-optimism-superchain",
+          },
+        ],
       },
       {
         text: "Blockchain-based social networks",
-        collapsed: true,
+        collapsed: false,
         items: [
           {
+            text: "Overview",
+            link: "/blockchain-based-social-networks/overview",
+          },
+          {
             text: "Learning from building CyberConnect",
-            link: "/social/learning-from-cc",
+            link: "/blockchain-based-social-networks/learning-from-building-cyberconnect",
           },
         ],
       },
       {
         text: "Cyber Architecture",
-        collapsed: true,
+        collapsed: false,
         items: [
+          { text: "Overview", link: "/architecture/overview" },
           {
             text: "OP Stack",
             link: "/architecture/op-stack",
@@ -53,41 +67,56 @@ export default defineConfig({
       },
       {
         text: "Cyber Token",
-        collapsed: true,
+        collapsed: false,
         items: [
+          { text: "Overview", link: "/cyber-token/overview" },
+          { text: "Token Address", link: "/cyber-token/token-address" },
           {
             text: "Governance",
-            link: "/token/governance",
+            link: "/cyber-token/governance",
           },
           {
             text: "Staking",
-            link: "/token/staking",
+            link: "/cyber-token/staking",
           },
           {
             text: "CYBER Token Distribution",
-            link: "/token/distribution",
+            link: "/cyber-token/distribution",
           },
         ],
       },
       {
         text: "Roadmap",
-        collapsed: true,
+        collapsed: false,
         items: [
-          { text: "Stage 1 (Q2 2024)", link: "/roadmap/stage1" },
-          { text: "Stage 2 (Q3 2024)", link: "/roadmap/stage2" },
-          { text: "Stage 3 (Q4 2024)", link: "/roadmap/stage3" },
-          { text: "Stage 4 (Q1 2025)", link: "/roadmap/stage4" },
-          { text: "Stage 5", link: "/roadmap/stage5" },
+          { text: "Overview", link: "/roadmap/overview" },
+          {
+            text: "Stage 1 (Q2 2024): Testnet with Governance Framework",
+            link: "/roadmap/stage1",
+          },
+          {
+            text: "Stage 2 (Q3 2024): Mainnet with EigenDA and Decentralized Verifier",
+            link: "/roadmap/stage2",
+          },
+          {
+            text: "Stage 3 (Q3/Q4 2024): Launch Decentralized/Shared Sequencer",
+            link: "/roadmap/stage3",
+          },
+          {
+            text: "Stage 4 (Q4 2024): Launch CyberDB",
+            link: "/roadmap/stage4",
+          },
+          {
+            text: "Stage 5 (Q1 2025): Upgrade to Native AA",
+            link: "/roadmap/stage5",
+          },
         ],
-      },
-      {
-        text: "Run a node (coming soon)",
       },
     ],
     "/cyber-wallet": [
       {
         text: "CyberWallet",
-        collapsed: true,
+        collapsed: false,
         items: [
           { text: "Overview", link: "/cyber-wallet/overview" },
           { text: "Account Abstract", link: "/cyber-wallet/erc4337" },
@@ -109,7 +138,7 @@ export default defineConfig({
     "/sdk": [
       {
         text: "SDK",
-        collapsed: true,
+        collapsed: false,
         items: [
           {
             text: "CyberAccount",
@@ -117,7 +146,7 @@ export default defineConfig({
           },
           {
             text: "CyberApps",
-            collapsed: true,
+            collapsed: false,
             items: [
               { text: "Overview", link: "/sdk/cyber-apps/overview" },
               {
@@ -131,13 +160,13 @@ export default defineConfig({
       },
       {
         text: "API Reference",
-        collapsed: true,
+        collapsed: false,
         items: [
           { text: "Overview", link: "/api-reference/overview" },
           { text: "Authentication", link: "/api-reference/auth" },
           {
             text: "Bundler Endpoints",
-            collapsed: true,
+            collapsed: false,
             items: [
               {
                 text: "eth_sendUserOperation",
@@ -167,7 +196,7 @@ export default defineConfig({
           },
           {
             text: "Paymaster Endpoints",
-            collapsed: true,
+            collapsed: false,
             items: [
               {
                 text: "cc_getUserCredit",
@@ -197,7 +226,7 @@ export default defineConfig({
     "/cyber-id": [
       {
         text: "CyberID",
-        collapsed: true,
+        collapsed: false,
         items: [
           { text: "Overview", link: "/cyber-id/overview" },
           { text: "Query Owner", link: "/cyber-id/query-owner" },

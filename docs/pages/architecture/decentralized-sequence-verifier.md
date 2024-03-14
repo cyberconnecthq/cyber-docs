@@ -1,4 +1,4 @@
-### Decentralized Sequencer & Verifier
+# Decentralized Sequencer & Verifier
 
 **Decentralized Sequencer**
 

@@ -1,4 +1,4 @@
-### CyberDB
+# CyberDB
 
 Social applications generate substantial amounts of data, yet not all of this data holds economic value worthy of being stored on-chain. Moreover, users of social dApps typically prefer to maintain their data privately and only share it with specific individuals on a need-to-know basis. Our solution, CyberDB, presents an innovative infrastructure designed to address these requirements, offering an open, secure, scalable, and Ethereum-compatible decentralized storage solution tailored to the needs of modern blockchain-based social networks.
 

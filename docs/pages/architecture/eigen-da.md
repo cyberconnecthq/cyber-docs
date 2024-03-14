@@ -1,4 +1,4 @@
-### EigenDA
+# EigenDA
 
 In the roll-up pattern, the sequencer will post blocks of transactions to Ethereum or a separate data availability service. While posting transaction data directly to Ethereum is a secure option, its data availability capability is not currently scalable, nor is it likely to become highly scalable in the near future. Cyber L2 leverages EigenLayer’s data availability infrastructure (EigenDA) as an innovative solution to reduce transaction costs for users significantly. The EigneDA is highly scalable and utilizes the novel idea of pooled security via restaking.
 
