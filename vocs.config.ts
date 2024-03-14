@@ -83,7 +83,6 @@ export default defineConfig({
       {
         text: "Run a node (coming soon)",
       },
-      { text: "Cyber DAO", link: "/cyber-dao" },
     ],
     "/cyber-wallet": [
       {
