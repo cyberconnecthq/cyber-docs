@@ -91,23 +91,23 @@ export default defineConfig({
         items: [
           { text: "Overview", link: "/roadmap/overview" },
           {
-            text: "Stage 1 (Q2 2024): Testnet with Governance Framework",
+            text: "Stage 1 (Q2 2024)",
             link: "/roadmap/stage1",
           },
           {
-            text: "Stage 2 (Q3 2024): Mainnet with EigenDA and Decentralized Verifier",
+            text: "Stage 2 (Q3 2024)",
             link: "/roadmap/stage2",
           },
           {
-            text: "Stage 3 (Q3/Q4 2024): Launch Decentralized/Shared Sequencer",
+            text: "Stage 3 (Q3/Q4 2024)",
             link: "/roadmap/stage3",
           },
           {
-            text: "Stage 4 (Q4 2024): Launch CyberDB",
+            text: "Stage 4 (Q4 2024)",
             link: "/roadmap/stage4",
           },
           {
-            text: "Stage 5 (Q1 2025): Upgrade to Native AA",
+            text: "Stage 5 (Q1 2025)",
             link: "/roadmap/stage5",
           },
         ],
