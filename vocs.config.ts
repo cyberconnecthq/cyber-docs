@@ -254,5 +254,5 @@ export default defineConfig({
       link: "https://discord.gg/cyberconnecthq",
     },
   ],
-  logoUrl: "/assets/logo.svg",
+  logoUrl: { dark: "/assets/logo.svg", light: "/assets/logo-black.svg" },
 });
