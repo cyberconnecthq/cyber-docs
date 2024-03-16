@@ -113,6 +113,61 @@ export default defineConfig({
         ],
       },
     ],
+    "/build-on-cyber": [
+      {
+        text: "Network Information",
+        collapsed: false,
+        items: [
+          { text: "Testnet", link: "/build-on-cyber/network-info-testnet" },
+          { text: "Mainnet", link: "/build-on-cyber/network-info-mainnet" }
+        ],
+      },
+      {
+        text: "Contract Addresses",
+        collapsed: false,
+        items: [
+          { text: "Testnet", link: "/build-on-cyber/addresses-testnet" },
+          { text: "Mainnet", link: "/build-on-cyber/addresses-mainnet" }
+        ],
+      },
+      {
+        text: "Resources and Tools",
+        collapsed: false,
+        items: [
+          { text: "RPC Providers", link: "/build-on-cyber/rpc-providers" },
+          { text: "Network Faucets", link: "/build-on-cyber/faucets" },
+          { text: "Oracles", link: "/build-on-cyber/oracles" },
+          { text: "Bridges", link: "/build-on-cyber/bridges" }
+        ],
+      },
+      {
+        text: "Development and Client",
+        collapsed: false,
+        items: [
+          { text: "Foundry", link: "/build-on-cyber/foundry" },
+          { text: "Hardhat", link: "/build-on-cyber/hardhat" },
+          { text: "Remix", link: "/build-on-cyber/remix" },
+          { text: "Ethers.js", link: "/build-on-cyber/ethersjs" },
+          { text: "Web3.js", link: "/build-on-cyber/web3js" },
+          { text: "Wagmi", link: "/build-on-cyber/wagmi" },
+          { text: "Account Abstraction", link: "/build-on-cyber/aa" }
+        ],
+      },
+      {
+        text: "Support",
+        collapsed: false,
+        items: [
+          { text: "Support", link: "/build-on-cyber/support" },
+        ],
+      },
+      {
+        text: "FAQ",
+        collapsed: false,
+        items: [
+          { text: "FAQ", link: "/build-on-cyber/faq" },
+        ],
+      }
+    ],
     "/cyber-wallet": [
       {
         text: "CyberWallet",
@@ -236,6 +291,7 @@ export default defineConfig({
     ],
   },
   topNav: [
+    { text: "Build on Cyber", link: "/build-on-cyber/network-info-testnet" },
     { text: "SDKs", link: "/sdk/cyber-account" },
     { text: "CyberWallet", link: "/cyber-wallet/overview" },
     { text: "CyberID", link: "/cyber-id/overview" },
