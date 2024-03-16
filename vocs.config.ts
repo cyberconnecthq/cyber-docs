@@ -119,7 +119,7 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: "Testnet", link: "/build-on-cyber/network-info-testnet" },
-          { text: "Mainnet", link: "/build-on-cyber/network-info-mainnet" }
+          { text: "Mainnet", link: "/build-on-cyber/network-info-mainnet" },
         ],
       },
       {
@@ -127,7 +127,7 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: "Testnet", link: "/build-on-cyber/addresses-testnet" },
-          { text: "Mainnet", link: "/build-on-cyber/addresses-mainnet" }
+          { text: "Mainnet", link: "/build-on-cyber/addresses-mainnet" },
         ],
       },
       {
@@ -137,7 +137,7 @@ export default defineConfig({
           { text: "RPC Providers", link: "/build-on-cyber/rpc-providers" },
           { text: "Network Faucets", link: "/build-on-cyber/faucets" },
           { text: "Oracles", link: "/build-on-cyber/oracles" },
-          { text: "Bridges", link: "/build-on-cyber/bridges" }
+          { text: "Bridges", link: "/build-on-cyber/bridges" },
         ],
       },
       {
@@ -147,26 +147,22 @@ export default defineConfig({
           { text: "Foundry", link: "/build-on-cyber/foundry" },
           { text: "Hardhat", link: "/build-on-cyber/hardhat" },
           { text: "Remix", link: "/build-on-cyber/remix" },
+          { text: "Wagmi", link: "/build-on-cyber/wagmi" },
           { text: "Ethers.js", link: "/build-on-cyber/ethersjs" },
           { text: "Web3.js", link: "/build-on-cyber/web3js" },
-          { text: "Wagmi", link: "/build-on-cyber/wagmi" },
-          { text: "Account Abstraction", link: "/build-on-cyber/aa" }
+          { text: "Account Abstraction", link: "/build-on-cyber/aa" },
         ],
       },
       {
         text: "Support",
         collapsed: false,
-        items: [
-          { text: "Support", link: "/build-on-cyber/support" },
-        ],
+        items: [{ text: "Support", link: "/build-on-cyber/support" }],
       },
       {
         text: "FAQ",
         collapsed: false,
-        items: [
-          { text: "FAQ", link: "/build-on-cyber/faq" },
-        ],
-      }
+        items: [{ text: "FAQ", link: "/build-on-cyber/faq" }],
+      },
     ],
     "/cyber-wallet": [
       {
