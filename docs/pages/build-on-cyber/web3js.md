@@ -5,9 +5,7 @@ You can also use web3.js to connect to Cyber Testnet and Mainnet.
 ## Install
 
 ```bash
-
 npm install --save web3
-
 ```
 
 ## Setup
