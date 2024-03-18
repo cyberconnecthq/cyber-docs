@@ -121,26 +121,17 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: "Testnet", link: "/build-on-cyber/network-info-testnet" },
-          { text: "Mainnet", link: "/build-on-cyber/network-info-mainnet" },
         ],
       },
       {
         text: "Contract Addresses",
         collapsed: false,
-        items: [
-          { text: "Testnet", link: "/build-on-cyber/addresses-testnet" },
-          { text: "Mainnet", link: "/build-on-cyber/addresses-mainnet" },
-        ],
+        items: [{ text: "Testnet", link: "/build-on-cyber/addresses-testnet" }],
       },
       {
         text: "Resources and Tools",
         collapsed: false,
-        items: [
-          { text: "RPC Providers", link: "/build-on-cyber/rpc-providers" },
-          { text: "Network Faucets", link: "/build-on-cyber/faucets" },
-          { text: "Oracles", link: "/build-on-cyber/oracles" },
-          { text: "Bridges", link: "/build-on-cyber/bridges" },
-        ],
+        items: [{ text: "Bridges", link: "/build-on-cyber/bridges" }],
       },
       {
         text: "Development and Client",
@@ -155,16 +146,16 @@ export default defineConfig({
           { text: "Account Abstraction", link: "/build-on-cyber/aa" },
         ],
       },
-      {
-        text: "Support",
-        collapsed: false,
-        items: [{ text: "Support", link: "/build-on-cyber/support" }],
-      },
-      {
-        text: "FAQ",
-        collapsed: false,
-        items: [{ text: "FAQ", link: "/build-on-cyber/faq" }],
-      },
+      // {
+      //   text: "Support",
+      //   collapsed: false,
+      //   items: [{ text: "Support", link: "/build-on-cyber/support" }],
+      // },
+      // {
+      //   text: "FAQ",
+      //   collapsed: false,
+      //   items: [{ text: "FAQ", link: "/build-on-cyber/faq" }],
+      // },
     ],
     "/cyber-wallet": [
       {
@@ -303,10 +294,10 @@ export default defineConfig({
       icon: "x",
       link: "https://twitter.com/cyberconnecthq",
     },
-    {
-      icon: "discord",
-      link: "https://discord.gg/cyberconnecthq",
-    },
+    // {
+    //   icon: "discord",
+    //   link: "https://discord.gg/cyberconnecthq",
+    // },
   ],
   logoUrl: { dark: "/assets/logo.svg", light: "/assets/logo-black.svg" },
 });
