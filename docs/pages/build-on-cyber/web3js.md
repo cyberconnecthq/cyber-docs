@@ -1,4 +1,4 @@
-# web3.js
+# Web3.js
 
 You can also use web3.js to connect to Cyber Testnet and Mainnet.
 

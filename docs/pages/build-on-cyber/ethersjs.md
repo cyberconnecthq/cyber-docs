@@ -1,4 +1,4 @@
-# ethers.js
+# Ethers.js
 
 ethers.js is a JavaScript library that allows developers to interact with EVM-compatible blockchain networks. You can use ethers.js to connect to Cyber Testnet and Mainnet.
 
