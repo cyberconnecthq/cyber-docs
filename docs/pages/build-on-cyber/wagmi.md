@@ -25,7 +25,7 @@ export const cyberTestnet = {
   blockExplorers: {
     default: {
       name: "Cyber Testnet Explorer",
-      url: "https://cyber-testnet-explorer.alt.technology/",
+      url: "https://testnet.cyberscan.co/",
     },
   },
 } as const satisfies Chain;
