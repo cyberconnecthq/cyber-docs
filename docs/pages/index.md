@@ -9,4 +9,4 @@ Cyber is the first restaked Ethereum Layer 2 designed for social and optimized f
 5. Powerful and Ethereum aligned with EigenDA. Much higher TPS than other L2s, and transaction fee costs average 1 cent USD.
 6. Native yield. Bridged ETH, LST, and LRT will earn yield from Ethereum staking and other rewards.
 7. Decentralized sequencer. A decentralized sequencer network secured by CYBER using EigenLayer AVS makes Cyber L2 censorship resistance. The staking reward is distributed to CYBER stakers. The sequencer fee is distributed to node operators, stakers, and developers.
-8. CyberGrant. More details to come.
+8. [Cyber Ecosystem Grants](https://app.charmverse.io/cyber-ecosystem-grants/). With a dedicate $2M worth of CYBER tokens, the program supports builders in growing a thriving social L2 ecosystem and accelerate the overall adoption of onchain social and web3.
