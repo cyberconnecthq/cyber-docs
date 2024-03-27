@@ -57,7 +57,7 @@ LwIDAQAB
 ### Sign the payload with your private key and get the signature. Example:
 
 ```go
-func GenerateJwtSig() string {
+func GenerateJwtSig() (string, error) {
     pemData, err := ioutil.ReadFile("./privateKey.pem")
     if err != nil {
         panic(err)
