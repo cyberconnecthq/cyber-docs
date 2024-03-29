@@ -206,35 +206,35 @@ export default defineConfig({
         text: "API Reference",
         collapsed: false,
         items: [
-          { text: "Overview", link: "/api-reference/overview" },
-          { text: "Authentication", link: "/api-reference/auth" },
+          { text: "Overview", link: "/sdk/api-reference/overview" },
+          { text: "Authentication", link: "/sdk/api-reference/auth" },
           {
             text: "Bundler Endpoints",
             collapsed: false,
             items: [
               {
                 text: "eth_sendUserOperation",
-                link: "/api-reference/bundler/eth_sendUserOperation",
+                link: "/sdk/api-reference/bundler/eth_sendUserOperation",
               },
               {
                 text: "eth_estimateUserOperationGas",
-                link: "/api-reference/bundler/eth_estimateUserOperationGas",
+                link: "/sdk/api-reference/bundler/eth_estimateUserOperationGas",
               },
               {
                 text: "eth_getUserOperationByHash",
-                link: "/api-reference/bundler/eth_getUserOperationByHash",
+                link: "/sdk/api-reference/bundler/eth_getUserOperationByHash",
               },
               {
                 text: "eth_getUserOperationReceipt",
-                link: "/api-reference/bundler/eth_getUserOperationReceipt",
+                link: "/sdk/api-reference/bundler/eth_getUserOperationReceipt",
               },
               {
                 text: "eth_chainId",
-                link: "/api-reference/bundler/eth_chainId",
+                link: "/sdk/api-reference/bundler/eth_chainId",
               },
               {
                 text: "eth_supportedEntryPoints",
-                link: "/api-reference/bundler/eth_supportedEntryPoints",
+                link: "/sdk/api-reference/bundler/eth_supportedEntryPoints",
               },
             ],
           },
@@ -244,23 +244,23 @@ export default defineConfig({
             items: [
               {
                 text: "cc_getUserCredit",
-                link: "/api-reference/paymaster/cc_getUserCredit",
+                link: "/sdk/api-reference/paymaster/cc_getUserCredit",
               },
               {
                 text: "cc_estimateUserOperation",
-                link: "/api-reference/paymaster/cc_estimateUserOperation",
+                link: "/sdk/api-reference/paymaster/cc_estimateUserOperation",
               },
               {
                 text: "cc_sponsorUserOperation",
-                link: "/api-reference/paymaster/cc_sponsorUserOperation",
+                link: "/sdk/api-reference/paymaster/cc_sponsorUserOperation",
               },
               {
                 text: "cc_listPendingUserOperations",
-                link: "/api-reference/paymaster/cc_listPendingUserOperations",
+                link: "/sdk/api-reference/paymaster/cc_listPendingUserOperations",
               },
               {
                 text: "cc_rejectUserOperation",
-                link: "/api-reference/paymaster/cc_rejectUserOperation",
+                link: "/sdk/api-reference/paymaster/cc_rejectUserOperation",
               },
             ],
           },
