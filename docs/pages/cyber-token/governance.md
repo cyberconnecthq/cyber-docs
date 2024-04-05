@@ -1,6 +1,6 @@
 # Governance
 
-It is intended that Cyber holders, stakers and delegates will have authority over Cyber L2 and CyberConnect Social Graph, along with their underlying protocols.
+It is intended that CYBER holders, stakers and delegates will have authority over Cyber L2 and CyberConnect Social Graph, along with their underlying protocols.
 
 CYBER stakers and CYBER holders are responsible for submitting, deliberating, and voting on governance proposals. CYBER holders can either vote directly or delegate their voting power to an eligible third party. CYBER stakers can vote directly using CYBER staked. However, this should not be the case indefinitely. When decentralized node operators (previously mentioned AVS operators) go online, they should vote using all the CYBER staked to them respectively.
 
