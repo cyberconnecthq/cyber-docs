@@ -189,6 +189,10 @@ export default defineConfig({
             link: "/sdk/cyber-account",
           },
           {
+            text: "CyberAccount Plugins",
+            link: "/sdk/cyber-account-plugins",
+          },
+          {
             text: "CyberApps",
             collapsed: false,
             items: [

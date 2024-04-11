@@ -1,0 +1,180 @@
+import { Callout } from 'vocs/components'
+
+# CyberAccount Plugins
+
+CyberAccount Plugins is a collection of plugins that can be used to extend the functionality of CyberAccount. 
+
+## Installation
+
+```bash
+npm install cyber-account-plugins permissionless
+```
+
+## Session Key Plugin
+
+Session Key plugin is used to generate a session key account for CyberAccount. With specific permission controls, session key accounts can be used to send transactions without the need of the signer confirmation.
+
+<Callout type="info">
+Try out [Session Key Live Demo](https://cyber-account-sdk-demo.vercel.app/)
+</Callout>
+
+### Setup
+
+Before creating a session key account, you need to prepare the following:
+* `signer`: The signer of CyberAccount
+* `cyberAccount`: a CyberAccount instance
+* `sessionKeySigner`: The signer of the session key account
+* `validatorData`: The permission data of the session key account
+
+#### Signer 
+`cyber-account-plugins` relies on `permissionless.js` to get the smart account signer, it provides two utility functions:
+* `walletClientToSmartAccountSigner` 
+* `providerToSmartAccountSigner`
+
+You can find more information about `permissionless.js` [here](https://docs.pimlico.io/permissionless)
+
+Here we'll use `providerToSmartAccountSigner` to get a signer from a provider.
+
+```javascript
+import { providerToSmartAccountSigner } from "permissionless"
+ 
+const smartAccountSigner = await providerToSmartAccountSigner(window.ethereum)
+```
+
+#### CyberAccount
+
+Create a CyberAccount instance following the [CyberAccount documentation](/sdk/cyber-account.mdx).
+
+```javascript
+const cyberAccount = new CyberAccount(...)
+```
+
+#### Session Key Signer
+Use a local private key from `viem` to create a session key signer.
+```javascript
+import { generatePrivateKey, privateKeyToAccount } from "viem/accounts";
+
+const sessionPrivateKey = generatePrivateKey();
+const sessionKeySigner = privateKeyToAccount(sessionPrivateKey);
+```
+
+#### Validator Data
+
+The `validatorData` is used to define the permissions of the session key account. It contains the following fields:
+
+* `validUntil`
+* `validAfter`
+* `paymaster` (supported soon)
+* `permissions`
+
+Here we'll use set a permission to allow the session key account to mint an NFT to the CyberAccount address.
+
+**Contract Info**
+```javascript
+const contractAddress = "0x34bE7f35132E97915633BC1fc020364EA5134863";
+
+const contractABI = parseAbi([
+  "function mint(address _to) public",
+  "function balanceOf(address owner) external view returns (uint256 balance)",
+]);
+
+```
+
+**Set Permissions**  
+`Operator` has the following values:
+* `EQUAL`
+* `GREATER_THAN` 
+* `LESS_THAN`
+* `GREATER_THAN_OR_EQUAL` 
+* `LESS_THAN_OR_EQUAL` 
+* `NOT_EQUAL`
+
+```javascript
+import { Operator } from "@cyberlab/cyber-account-plugins"
+
+const validatorData = {
+  permissions: [
+    {
+      target: contractAddress,
+      valueLimit: BigInt(0),
+      abi: contractABI,
+      functionName: "mint",
+      args: [
+        {
+          operator: Operator.EQUAL,
+          value: cyberAccount.address,
+        },
+      ],
+    },
+  ],
+}
+```
+
+### Create Session Key Account
+
+```javascript
+import { createSessionKeyAccount } from "@cyberlab/cyber-account-plugins";
+
+const sessionKeyAccount = await createSessionKeyAccount({
+  signer: smartAccountSigner,
+  cyberAccount,
+  sessionKeySigner,
+  validatorData,
+});
+
+```
+### Create Session Key Account Client
+
+Before sending transactions with the session key account, you need to create a session key account client.
+
+```javascript
+import { createSessionKeyAccountClient } from "@cyberlab/cyber-account-plugins";
+
+const sessionKeyAccountClient = await createSessionKeyAccountClient(
+  sessionKeyAccount,
+  cyberAccount,
+);
+```
+
+### Send Transaction
+
+```javascript
+const txHash = await sessionKeyAccountClient.sendTransaction({
+  to: contractAddress,
+  value: BigInt(0),
+  data: encodeFunctionData({
+    abi: contractABI,
+    functionName: "mint",
+    args: [cyberAccount.address],
+  }),
+});
+```
+
+### Serialize Session Key Account
+You can use `serializeSessionKeyAccount` to serialize the session key account. This will produce a JWT-like string that can be used to recreate the session key account by using `deserializeSessionKeyAccount`.
+
+```javascript
+
+import { serializeSessionKeyAccount } from "@cyberlab/cyber-account-plugins";
+
+ const serializedAccount = await serializeSessionKeyAccount(
+   sessionKeyAccount,
+   sessionPrivateKey, // the private key that was created at the Session Key Signer step
+ );
+
+```
+
+### Deserialize Session Key Account
+You can use `deserializeSessionKeyAccount` to deserialize the session key account. This will produce a session key account object that can be used to create the session key account client.
+
+```javascript
+import { deserializeSessionKeyAccount } from "@cyberlab/cyber-account-plugins";
+
+const sessionKeyAccount = await deserializeSessionKeyAccount(
+    cyberAccount.publicClient,
+    serializedAccount
+);
+```
+
+### Full Example
+You can find the full example [here](https://github.com/cyberconnecthq/cyber-account-sdk-demo).
