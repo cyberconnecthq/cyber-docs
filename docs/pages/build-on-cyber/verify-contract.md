@@ -82,3 +82,9 @@ yarn hardhat verify --contract contracts/Counter.sol:Counter 0x91f4e4E26024b084a
 ```shell
 yarn hardhat verify --contract contracts/Counter.sol:Counter 0x91f4e4E26024b084a277c95a873Bd3c15c3206c3 --network cyber_testnet
 ```
+
+### More Information
+
+```
+https://docs.blockscout.com/for-users/verifying-a-smart-contract/hardhat-verification-plugin
+```
