@@ -157,9 +157,9 @@ export default defineConfig({
     ],
   },
 
-      {
-        text: "FAQ", link: "/build-on-cyber/faq"
-      },
+      //{
+      // text: "FAQ", link: "/build-on-cyber/faq"
+      //},
       
       {
        text: "Support", link: "/build-on-cyber/support"
