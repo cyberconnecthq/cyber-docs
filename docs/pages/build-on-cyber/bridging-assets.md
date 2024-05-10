@@ -11,7 +11,7 @@ Before using the bridge, ensure you have:
 3. Cyber Testnet added to your wallet: Make sure you check out [Network Information](https://docs.cyber.co/build-on-cyber/network-info-testnet) to receive assets on the cyber test network.
 
 ## How to Use the Bridge
-Step 1: Visit the [Cyber Testnet Bridge](https://cyber-testnet-bridge.alt.technology/deposit) and connect Your wallet.
+Step 1: Visit the [Cyber Testnet Bridge](https://cyber-testnet.testnets.rollbridge.app/) and connect Your wallet.
 
 - Click on "Connect Wallet" and select your wallet (e.g., MetaMask).
 
