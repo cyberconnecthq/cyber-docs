@@ -117,10 +117,19 @@ export default defineConfig({
     ],
     "/build-on-cyber": [
       {
-        text: "Network Information",
+        text: "Getting started",
         collapsed: false,
         items: [
-          { text: "Testnet", link: "/build-on-cyber/network-info-testnet" },
+          { text: "Network information", link: "/build-on-cyber/network-info-testnet" },
+          {
+            "text": "How-to Guides",
+            "collapsed": false,
+            "items": [
+              { "text": "Add Cyber Testnet to Metamask", "link": "/build-on-cyber/connecting-wallet"},
+              { "text": "Bridge assets to Cyber Testnet", "link": "/build-on-cyber/bridging-assets" },
+              {"text": "Deploy your first contract", "link": "/build-on-cyber/contract-deployment" }
+            ]
+          },
         ],
       },
       {
@@ -131,33 +140,32 @@ export default defineConfig({
       {
         text: "Resources and Tools",
         collapsed: false,
-        items: [{ text: "Bridges", link: "/build-on-cyber/bridges" }],
-      },
-      {
-        text: "Development and Client",
-        collapsed: false,
-        items: [
+        items: [{ text: "Bridges", link: "/build-on-cyber/bridges" },
+        { "text": "Development and Client",
+        "collapsed": false,
+        "items": [
           { text: "Foundry", link: "/build-on-cyber/foundry" },
           { text: "Hardhat", link: "/build-on-cyber/hardhat" },
           { text: "Remix", link: "/build-on-cyber/remix" },
           {text: "Verify Contract", link: "/build-on-cyber/verify-contract"},
           { text: "Wagmi", link: "/build-on-cyber/wagmi" },
           { text: "Ethers.js", link: "/build-on-cyber/ethersjs" },
-          { text: "Web3.js", link: "/build-on-cyber/web3js" },
-          { text: "Account Abstraction", link: "/build-on-cyber/aa" },
-        ],
+          { text: "Web3.js", link: "/build-on-cyber/web3js" },]
       },
-      // {
-      //   text: "Support",
-      //   collapsed: false,
-      //   items: [{ text: "Support", link: "/build-on-cyber/support" }],
-      // },
-      // {
-      //   text: "FAQ",
-      //   collapsed: false,
-      //   items: [{ text: "FAQ", link: "/build-on-cyber/faq" }],
-      // },
+
+      {text: "Account Abstraction", link: "/build-on-cyber/aa"},
     ],
+  },
+
+      //{
+      // text: "FAQ", link: "/build-on-cyber/faq"
+      //},
+      
+      {
+       text: "Support", link: "/build-on-cyber/support"
+      },
+    ],
+    
     "/cyber-wallet": [
       {
         text: "CyberWallet",

@@ -1,9 +1,9 @@
 # Network Information
 
-| Item            | Value                                 |
-| --------------- | ------------------------------------- |
-| Network Name    | Cyber Testnet                         |
-| RPC Endpoint    | https://cyber-testnet.alt.technology/ |
-| Chain ID        | 111557560                             |
-| Currency Symbol | ETH                                   |
-| Block Explorer  | https://testnet.cyberscan.co/         |
+| Name            | Testnet                               | Mainnet             |
+| --------------- | ------------------------------------- | ----------------    |
+| Network Name    | Cyber Testnet                         | Coming soon!        |   
+| RPC Endpoint    | https://cyber-testnet.alt.technology/ | Coming soon!        |
+| Chain ID        | 111557560                             | Coming soon!        |
+| Currency Symbol | ETH                                   | Coming soon!        |
+| Block Explorer  | https://testnet.cyberscan.co/         | Coming soon!        |
