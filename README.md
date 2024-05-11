@@ -20,4 +20,4 @@ Website: [https://docs.cyber.co](https://docs.cyber.co)
 
 5. Customize the sidebar
 
-   You can customize the sidebar by editing the `vocs.config.ts` file. More details here: [Customize Sidebar](https://vocs.dev/docs/sidebar#customize-sidebar)
+   You can customize the sidebar by editing the `vocs.config.ts` file. More details here: [Customize Sidebar](https://vocs.dev/docs/guides/navigation#sidebar--top-navigation)
