@@ -50,8 +50,12 @@ Deploying a contract with Forge is a simple process that can be done with a sing
 
 To deploy the Counter.sol contract, use the command that corresponds to the Cyber chain's RPC URL while running the forge create command:
 
+Testnet
 ```bash
-    forge create --rpc-url "RPC URL" //Insert your RPC URL here
-    --private-key YOUR_PRIVATE_KEY \
-    src/Counter.sol:Counter
+    forge create --rpc-url "https://cyber-testnet.alt.technology/" --private-key YOUR_PRIVATE_KEY  src/Counter.sol:Counter
+```
+
+Mainnet
+```bash
+    forge create --rpc-url "https://cyber.alt.technology/" --private-key YOUR_PRIVATE_KEY src/Counter.sol:Counter
 ```
