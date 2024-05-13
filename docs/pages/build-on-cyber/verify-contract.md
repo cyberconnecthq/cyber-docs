@@ -5,68 +5,67 @@
 ### mainnet
 
 ```bash
-forge verify-contract --verifier blockscout --verifier-url https://cyberscan.co/api --chain-id 7560 0x52B04768006c54D93885597e6B3189fD176A52F8 src/Counter.sol:Counter
+forge verify-contract --verifier blockscout --verifier-url https://api.socialscan.io/cyber-testnet/v1/explorer/command_api/contract --chain-id 7560 <CONTRACT_ADDRESS> src/Counter.sol:Counter
 ```
 
 ### testent
 
 ```bash
-forge verify-contract --verifier blockscout --verifier-url https://testnet.cyberscan.co/api --chain-id 111557560 0x52B04768006c54D93885597e6B3189fD176A52F8 src/Counter.sol:Counter
+forge verify-contract --verifier blockscout --verifier-url https://api.socialscan.io/cyber/v1/explorer/command_api/contract --chain-id 111557560 <CONTRACT_ADDRESS> src/Counter.sol:Counter
+```
+
+### More Information
+
+```
+https://thehemera.gitbook.io/explorer-api/verify-smart-contract/verify-smart-contract/verify-through-foundry
 ```
 
 ## Hardhat
-
-### Install dependences
-
-```shell
-yarn
-```
 
 ### Config network
 
 ```
 networks: {
-    cyber_testnet: {
-      url: 'https://cyber-testnet.alt.technology/',
+    CyberTestnet: {
+      url: "https://cyber-testnet.alt.technology/",
       chainId: 111557560,
-      accounts: ["YOUR_SK"],
+      accounts: [privateKey],
     },
-    cyber: {
-      url: 'https://cyber.alt.technology/',
+    Cyber: {
+      url: "https://cyber.alt.technology/",
       chainId: 7560,
-      accounts: ["YOUR_SK"],
-    }
-},
+      accounts: [privateKey],
+    },
+  },
 ```
 
 ## Config etherscan 
 
 ```
 etherscan: {
-    // dummy key "abc"
-    apiKey: {
-      cyber_testnet: "abc",
-      cyber: "abc"
-    },
     customChains: [
       {
-        network: "cyber_testnet",
+        network: "CyberTestnet",
         chainId: 111557560,
         urls: {
-          apiURL: "https://testnet.cyberscan.co/api",
-          browserURL: "https://testnet.cyberscan.co"
-        }
+          apiURL: "https://api.socialscan.io/cyber-testnet/v1/explorer/command_api/contract",
+          browserURL: "https://cyber-testnet.socialscan.io",
+        },
       },
       {
-        network: "cyber",
+        network: "Cyber",
         chainId: 7560,
         urls: {
-          apiURL: "https://cyberscan.co/api",
-          browserURL: "https://cyberscan.co"
-        }
+          apiURL: "https://api.socialscan.io/cyber/v1/explorer/command_api/contract",
+          browserURL: "https://cyber.socialscan.io",
+        },
       },
-    ]
-}
+    ],
+    apiKey: {
+      CyberTestnet: "abc",
+      Cyber: "abc",
+    },
+  }
 ```
 
 ### Verify Counter contract
@@ -74,17 +73,17 @@ etherscan: {
 #### mainnet
 
 ```shell
-yarn hardhat verify --contract contracts/Counter.sol:Counter 0x91f4e4E26024b084a277c95a873Bd3c15c3206c3 --network cyber
+npx hardhat verify <CONTRACT_ADDRESS> --network Cyber
 ```
 
 #### testent
 
 ```shell
-yarn hardhat verify --contract contracts/Counter.sol:Counter 0x91f4e4E26024b084a277c95a873Bd3c15c3206c3 --network cyber_testnet
+npx hardhat verify <CONTRACT_ADDRESS> --network CyberTestnet
 ```
 
 ### More Information
 
 ```
-https://docs.blockscout.com/for-users/verifying-a-smart-contract/hardhat-verification-plugin
+https://thehemera.gitbook.io/explorer-api/verify-smart-contract/verify-smart-contract/verify-through-hardhat
 ```

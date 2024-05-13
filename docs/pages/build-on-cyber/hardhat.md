@@ -33,26 +33,6 @@ npm install hardhat
 npx hardhat
 ```
 
-5.Create an empty hardhat.config.js and install the Ethers plugin to use the Ethers.js library to interact with the network.
-
-```bash
-npm install @nomiclabs/hardhat-ethers ethers
-```
-
-## Creating your Smart Contract
-
-1. Create a contracts directory
-
-```bash
-mkdir contracts && cd contracts
-```
-
-2. Create your_contract.sol file in contracts directory
-
-```bash
-touch your_contract.sol
-```
-
 ## Creating your Configuration File
 
 Modify the Hardhat configuration file and create a secure file to store your private key in.
@@ -60,7 +40,6 @@ Modify the Hardhat configuration file and create a secure file to store your pri
 1. Create a secrets.json file to store your private key
 
 ```bash
-cd ../
 touch secrets.json
 ```
 
@@ -75,24 +54,27 @@ touch secrets.json
 3. Add the file to your project's .gitignore, and never reveal your private key.
 4. Modify the hardhat.config.js file
 
-- Import the Ethers plugin
 - Import the secrets.json file
 - Inside the module.exports add the Cyber network configuration
 
 ```js
 //hardhat.config.js
-
-require("@nomiclabs/hardhat-ethers");
+require("@nomicfoundation/hardhat-toolbox");
 const { privateKey } = require("./secrets.json");
 
 module.exports = {
   solidity: "0.8.14",
-  defaultNetwork: "Cyber",
+  defaultNetwork: "CyberTestnet",
   networks: {
+    CyberTestnet: {
+      url: "https://cyber-testnet.alt.technology/",
+      chainId: 111557560,
+      accounts: [privateKey],
+    },
     Cyber: {
-      url: "CHAIN_RPC_URL", // Insert Cyber RPC URL Here
-      chainId: CHAIN_ID, // Insert Cyber ChainID Here
-      accounts: ["YOUR_PRIVATE_KEY"], // Insert your private key here
+      url: "https://cyber.alt.technology/",
+      chainId: 7560,
+      accounts: [privateKey],
     },
   },
 };
@@ -119,17 +101,17 @@ touch deploy.js
 // scripts/deploy.js
 async function main() {
   // 1. Get the contract to deploy
-  const Your_Contract = await ethers.getContractFactory("your_contract");
-  console.log("Deploying Your_Contract...");
+  const LockFactory = await ethers.getContractFactory("Lock");
+  console.log("Deploying Lock...");
 
   // 2. Instantiating a new smart contract
-  const your_contract = await Your_Contract.deploy();
+  const lock = await LockFactory.deploy(1900000000);
 
   // 3. Waiting for the deployment to resolve
-  await your_contract.deployed();
+  await lock.waitForDeployment();
 
   // 4. Use the contract instance to get the contract address
-  console.log("Your_Contract deployed to:", your_contract.address);
+  console.log("lock deployed to:", lock.target);
 }
 
 main()
@@ -140,8 +122,19 @@ main()
   });
 ```
 
-4. Deploy your_contract.sol using the command below
+4. Deploy Lock.sol using the command below
 
+```bash
+npx hardhat run scripts/deploy.js --network CyberTestnet
+```
+
+Testnet
+```bash
+cd ../
+npx hardhat run scripts/deploy.js --network CyberTestnet
+```
+
+Mainnet
 ```bash
 cd ../
 npx hardhat run scripts/deploy.js --network Cyber
