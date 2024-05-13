@@ -125,7 +125,7 @@ main()
 4. Deploy Lock.sol using the command below
 
 ```bash
-npx hardhat run scripts/deploy.js --network CyberTestnet
+cd ../
 ```
 
 Testnet
