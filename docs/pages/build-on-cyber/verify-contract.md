@@ -5,13 +5,13 @@
 ### mainnet
 
 ```bash
-forge verify-contract --verifier blockscout --verifier-url https://api.socialscan.io/cyber-testnet/v1/explorer/command_api/contract --chain-id 7560 <CONTRACT_ADDRESS> src/Counter.sol:Counter
+forge verify-contract --verifier blockscout --verifier-url https://api.socialscan.io/cyber/v1/explorer/command_api/contract --chain-id 7560 <CONTRACT_ADDRESS> src/Counter.sol:Counter
 ```
 
 ### testent
 
 ```bash
-forge verify-contract --verifier blockscout --verifier-url https://api.socialscan.io/cyber/v1/explorer/command_api/contract --chain-id 111557560 <CONTRACT_ADDRESS> src/Counter.sol:Counter
+forge verify-contract --verifier blockscout --verifier-url https://api.socialscan.io/cyber-testnet/v1/explorer/command_api/contract --chain-id 111557560 <CONTRACT_ADDRESS> src/Counter.sol:Counter
 ```
 
 ### More Information
