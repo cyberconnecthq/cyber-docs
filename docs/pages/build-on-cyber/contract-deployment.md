@@ -6,10 +6,10 @@ In this tutorial we will be learning how to deploy a simple smart contracts on C
 Before deploying your smart contract, ensure you have completed the following:
 
 1. **Add Cyber Testnet to MetaMask**  
-   Follow the [guide for adding the Cyber Testnet network](/build-on-cyber/connecting-wallet) to your MetaMask wallet.
+   Follow the [Guide for adding the Cyber network](/build-on-cyber/connecting-wallet) to your MetaMask wallet.
 
 2. **Bridging Assets to Cyber Testnet**  
-   Use the [Bridging assets to Cyber Testnet guide](/build-on-cyber/bridging-assets) to transfer assets from other networks to Cyber Testnet so you have funds available for deployment.
+   Use the [Bridging assets to Cyber guide](/build-on-cyber/bridging-assets) to transfer assets from other networks to Cyber so you have funds available for deployment.
 
 ## Step 2: Install Foundry
 
@@ -53,16 +53,31 @@ Deploying a contract with Forge is a simple process that can be done with a sing
 
 To deploy the Counter.sol contract, use the command that corresponds to the Cyber chain's RPC URL while running the forge create command:
 
+Testnet
 ```bash
-    forge create --rpc-url "RPC URL" //Insert your RPC URL here
-    --private-key YOUR_PRIVATE_KEY \
-    src/Counter.sol:Counter
+    forge create --rpc-url "https://cyber-testnet.alt.technology/" --private-key YOUR_PRIVATE_KEY  src/Counter.sol:Counter
+```
+
+Mainnet
+```bash
+    forge create --rpc-url "https://cyber.alt.technology/" --private-key YOUR_PRIVATE_KEY src/Counter.sol:Counter
 ```
 
 ## Step 5: Verify Your Smart Contract
-After deployment, you can verify your smart contract on the Cyber Testnet Explorer by visiting [Cyber Testnet Explorer](https://testnet.cyberscan.co/). 
+After deployment, you can verify your smart contract on the Cyber Explorer by visiting [Cyber Testnet Explorer](https://testnet.cyberscan.co/) or [Cyber Mainnet Explorer](https://cyberscan.co/). 
 Search for your contract using its address and confirm that it has been successfully deployed.
 
+**Congratulations on deploying your contract on our mainnet!**
 
-#### If you face any issues, feel free to reach out to our engineers on [Discord](/build-on-cyber/support.md).
+## Step 6: Join Cyber builders ecosystem
+
+Visit our [Ecosystem builder form](https://cyber.deform.cc/ecosystem-builder) and fill out all required fields. Provide the transaction hash of your contract deployment as proof and submit the form.
+
+## Step 7: Join Discord and receive NFT Airdrop
+
+- Join our [Discord community](https://discord.gg/cyberconnecthq).
+
+After verifying your contract deployment and form submission, you will receive an NFT airdrop to the provided wallet address. Keep an eye on announcements in Discord for updates on the airdrop distribution process.
+
+#### If you face any issues, feel free to reach out to our engineers for [Support](/build-on-cyber/support.md).
 
