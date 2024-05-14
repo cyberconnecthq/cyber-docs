@@ -120,15 +120,27 @@ export default defineConfig({
         text: "Getting started",
         collapsed: false,
         items: [
-          { text: "Network information", link: "/build-on-cyber/network-info-testnet" },
           {
-            "text": "How-to Guides",
-            "collapsed": false,
-            "items": [
-              { "text": "Add Cyber Testnet to Metamask", "link": "/build-on-cyber/connecting-wallet"},
-              { "text": "Bridge assets to Cyber Testnet", "link": "/build-on-cyber/bridging-assets" },
-              {"text": "Deploy your first contract", "link": "/build-on-cyber/contract-deployment" }
-            ]
+            text: "Network information",
+            link: "/build-on-cyber/network-info-testnet",
+          },
+          {
+            text: "How-to Guides",
+            collapsed: false,
+            items: [
+              {
+                text: "Add Cyber Testnet to Metamask",
+                link: "/build-on-cyber/connecting-wallet",
+              },
+              {
+                text: "Bridge assets to Cyber Testnet",
+                link: "/build-on-cyber/bridging-assets",
+              },
+              {
+                text: "Deploy your first contract",
+                link: "/build-on-cyber/contract-deployment",
+              },
+            ],
           },
         ],
       },
@@ -140,32 +152,63 @@ export default defineConfig({
       {
         text: "Resources and Tools",
         collapsed: false,
-        items: [{ text: "Bridges", link: "/build-on-cyber/bridges" },
-        { "text": "Development and Client",
-        "collapsed": false,
-        "items": [
-          { text: "Foundry", link: "/build-on-cyber/foundry" },
-          { text: "Hardhat", link: "/build-on-cyber/hardhat" },
-          { text: "Remix", link: "/build-on-cyber/remix" },
-          {text: "Verify Contract", link: "/build-on-cyber/verify-contract"},
-          { text: "Wagmi", link: "/build-on-cyber/wagmi" },
-          { text: "Ethers.js", link: "/build-on-cyber/ethersjs" },
-          { text: "Web3.js", link: "/build-on-cyber/web3js" },]
+        items: [
+          { text: "Bridges", link: "/build-on-cyber/bridges" },
+          {
+            text: "Development and Client",
+            collapsed: false,
+            items: [
+              { text: "Foundry", link: "/build-on-cyber/foundry" },
+              { text: "Hardhat", link: "/build-on-cyber/hardhat" },
+              { text: "Remix", link: "/build-on-cyber/remix" },
+              {
+                text: "Verify Contract",
+                link: "/build-on-cyber/verify-contract",
+              },
+              { text: "Wagmi", link: "/build-on-cyber/wagmi" },
+              { text: "Ethers.js", link: "/build-on-cyber/ethersjs" },
+              { text: "Web3.js", link: "/build-on-cyber/web3js" },
+            ],
+          },
+          {
+            text: "Account Abstraction",
+            collapsed: false,
+            items: [
+              {
+                text: "ZeroDev",
+                link: "/build-on-cyber/account-abstraction/zerodev",
+              },
+              {
+                text: "Pimlico",
+                link: "/build-on-cyber/account-abstraction/pimlico",
+              },
+              {
+                text: "Alchemy Account Kit",
+                link: "/build-on-cyber/account-abstraction/alchemy-account-kit",
+              },
+              {
+                text: "Particle",
+                link: "/build-on-cyber/account-abstraction/particle",
+              },
+              {
+                text: "Turnkey",
+                link: "/build-on-cyber/account-abstraction/turnkey",
+              },
+            ],
+          },
+        ],
       },
-
-      {text: "Account Abstraction", link: "/build-on-cyber/aa"},
-    ],
-  },
 
       //{
       // text: "FAQ", link: "/build-on-cyber/faq"
       //},
-      
+
       {
-       text: "Support", link: "/build-on-cyber/support"
+        text: "Support",
+        link: "/build-on-cyber/support",
       },
     ],
-    
+
     "/cyber-wallet": [
       {
         text: "CyberWallet",
