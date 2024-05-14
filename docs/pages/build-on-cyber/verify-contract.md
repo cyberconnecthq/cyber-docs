@@ -14,11 +14,7 @@ forge verify-contract --verifier blockscout --verifier-url https://api.socialsca
 forge verify-contract --verifier blockscout --verifier-url https://api.socialscan.io/cyber-testnet/v1/explorer/command_api/contract --chain-id 111557560 <CONTRACT_ADDRESS> src/Counter.sol:Counter
 ```
 
-### More Information
-
-```
-https://thehemera.gitbook.io/explorer-api/verify-smart-contract/verify-smart-contract/verify-through-foundry
-```
+[More Information](https://thehemera.gitbook.io/explorer-api/verify-smart-contract/verify-smart-contract/verify-through-foundry)
 
 ## Hardhat
 
@@ -82,8 +78,4 @@ npx hardhat verify <CONTRACT_ADDRESS> --network Cyber
 npx hardhat verify <CONTRACT_ADDRESS> --network CyberTestnet
 ```
 
-### More Information
-
-```
-https://thehemera.gitbook.io/explorer-api/verify-smart-contract/verify-smart-contract/verify-through-hardhat
-```
+[More Information](https://thehemera.gitbook.io/explorer-api/verify-smart-contract/verify-smart-contract/verify-through-hardhat)
