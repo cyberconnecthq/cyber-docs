@@ -129,7 +129,7 @@ export default defineConfig({
             collapsed: false,
             items: [
               {
-                text: "Add Cyber Testnet to Metamask",
+                text: "Add Cyber to Metamask",
                 link: "/build-on-cyber/connecting-wallet",
               },
               {
