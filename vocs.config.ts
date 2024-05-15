@@ -7,7 +7,7 @@ export default defineConfig({
     accentColor: { light: "#0c9b00", dark: "#07DC10" },
   },
   banner:
-    "**Cyber Mainnnet** is live! Learn [how to build on Cyber](/build-on-cyber/network-info-testnet).",
+    "**Cyber Mainnnet** is live! Learn [how to build on Cyber](/build-on-cyber/network-info).",
   sidebar: {
     "/": [
       {
