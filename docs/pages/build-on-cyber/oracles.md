@@ -8,6 +8,3 @@ Learn how to use Redstone feeds with [this guide](https://docs.redstone.finance/
 ### Supported Networks
 - Cyber Mainnet
 - Cyber Testnet
-
-## API3
-coming soon...
