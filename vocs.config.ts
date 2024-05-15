@@ -4,7 +4,7 @@ export default defineConfig({
   title: "Cyber Docs",
   titleTemplate: "%s – Cyber Docs",
   banner:
-    "**Cyber Testnet** is live! Learn [how to build on Cyber](/build-on-cyber/network-info-testnet).",
+    "**Cyber Testnet** is live! Learn [how to build on Cyber](/build-on-cyber/network-info).",
   sidebar: {
     "/": [
       {
@@ -122,7 +122,7 @@ export default defineConfig({
         items: [
           {
             text: "Network information",
-            link: "/build-on-cyber/network-info-testnet",
+            link: "/build-on-cyber/network-info",
           },
           {
             text: "How-to Guides",
@@ -147,13 +147,19 @@ export default defineConfig({
       {
         text: "Contract Addresses",
         collapsed: false,
-        items: [{ text: "Testnet", link: "/build-on-cyber/addresses-testnet" }],
+        items: [
+          { text: "Testnet", link: "/build-on-cyber/addresses-testnet" },
+          { text: "Mainnet", link: "/build-on-cyber/addresses-mainnet" },
+        ],
       },
       {
         text: "Resources and Tools",
         collapsed: false,
         items: [
           { text: "Bridges", link: "/build-on-cyber/bridges" },
+          { text: "Node Providers", link: "/build-on-cyber/node-providers" },
+          { text: "Block Explorers", link: "/build-on-cyber/block-explorers" },
+          { text: "Oracles", link: "/build-on-cyber/oracles" },
           {
             text: "Development and Client",
             collapsed: false,
@@ -336,7 +342,7 @@ export default defineConfig({
     ],
   },
   topNav: [
-    { text: "Build on Cyber", link: "/build-on-cyber/network-info-testnet" },
+    { text: "Build on Cyber", link: "/build-on-cyber/network-info" },
     { text: "SDKs", link: "/sdk/cyber-account" },
     { text: "CyberWallet", link: "/cyber-wallet/overview" },
     { text: "CyberID", link: "/cyber-id/overview" },

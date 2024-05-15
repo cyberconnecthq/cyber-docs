@@ -5,3 +5,6 @@ The bridge allows seamless asset transfer between these networks to help develop
 https://cyber-testnet.testnets.rollbridge.app/
 
 To learn about how to use the bridge visit the guide to [Bridging assets to Cyber Testnet](/build-on-cyber/bridging-assets).
+
+## Bridge ETH to Cyber Mainnet
+https://cyber.co/bridge
