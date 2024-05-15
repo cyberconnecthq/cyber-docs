@@ -8,7 +8,7 @@ Before using the bridge, ensure you have:
 1. MetaMask or Compatible Wallet: Installed and configured to connect to both Sepolia and Cyber networks.
 2. Sepolia Testnet ETH: Sufficient balance to cover bridging costs and potential gas fees.
 - To claim Sepolia ETH, you can use [Alchemy Faucet](https://www.alchemy.com/faucets/ethereum-sepolia)
-3. Cyber Testnet added to your wallet: Make sure you check out [Network Information](https://docs.cyber.co/build-on-cyber/network-info-testnet) to receive assets on the cyber test network.
+1. Cyber Testnet added to your wallet: Make sure you check out [Network Information](/build-on-cyber/network-info) to receive assets on the cyber test network.
 
 ## How to Use the Bridge
 Step 1: Visit the [Cyber Testnet Bridge](https://cyber-testnet.testnets.rollbridge.app/) and connect Your wallet.

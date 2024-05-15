@@ -130,12 +130,10 @@ cd ../
 
 Testnet
 ```bash
-cd ../
 npx hardhat run scripts/deploy.js --network CyberTestnet
 ```
 
 Mainnet
 ```bash
-cd ../
 npx hardhat run scripts/deploy.js --network Cyber
 ```
