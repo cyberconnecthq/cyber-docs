@@ -3,8 +3,11 @@ import { defineConfig } from "vocs";
 export default defineConfig({
   title: "Cyber Docs",
   titleTemplate: "%s – Cyber Docs",
+  theme: {
+    accentColor: { light: "#0c9b00", dark: "#07DC10" },
+  },
   banner:
-    "**Cyber Testnet** is live! Learn [how to build on Cyber](/build-on-cyber/network-info).",
+    "**Cyber Mainnnet** is live! Learn [how to build on Cyber](/build-on-cyber/network-info-testnet).",
   sidebar: {
     "/": [
       {
