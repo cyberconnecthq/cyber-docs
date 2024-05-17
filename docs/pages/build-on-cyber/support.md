@@ -9,7 +9,7 @@ Our primary support channel is on Discord. By joining our Discord server, you ca
 
 ### How to Join Our Discord
 
-1. [**Join the CyberConnect discord server**](https://discord.com/invite/cyberconnecthq)
+1. [**Join the CyberConnect discord server**](https://discord.gg/buildoncyber)
 
 2. **Navigate to the Support Channels**  
    Once you join, look for the support-specific channels under "Builders & Developers". For general support discussions you can post your questions under `#dev-discussions` or to open a support ticket create a post under `#dev-support`.
