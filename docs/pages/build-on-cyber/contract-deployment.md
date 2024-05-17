@@ -71,13 +71,13 @@ Search for your contract using its address and confirm that it has been successf
 
 ## Step 6: Join Cyber builders ecosystem
 
-Visit our [Ecosystem builder form](https://cyber.deform.cc/ecosystem-builder) and fill out all required fields. Provide the transaction hash of your contract deployment as proof and submit the form.
+Visit our [Ecosystem builder form](https://cyber.deform.cc/ecosystem-builder) and fill out all required fields. Provide the transaction hash of your **Mainnet** contract deployment as proof and submit the form.
 
 ## Step 7: Join Discord and receive NFT Airdrop
 
 - Join our [Discord community](https://discord.com/invite/buildoncyber).
 
-After verifying your contract deployment and form submission, you will receive an NFT airdrop to the provided wallet address. Keep an eye on announcements in Discord for updates on the airdrop distribution process.
+After verifying your **Mainnet** contract deployment and form submission, you will receive an NFT airdrop to the provided wallet address. Keep an eye on announcements in Discord for updates on the airdrop distribution process.
 
 #### If you face any issues, feel free to reach out to our engineers for [Support](/build-on-cyber/support.md).
 
