@@ -75,7 +75,7 @@ Visit our [Ecosystem builder form](https://cyber.deform.cc/ecosystem-builder) an
 
 ## Step 7: Join Discord and receive NFT Airdrop
 
-- Join our [Discord community](https://discord.gg/cyberconnecthq).
+- Join our [Discord community](https://discord.com/invite/buildoncyber).
 
 After verifying your contract deployment and form submission, you will receive an NFT airdrop to the provided wallet address. Keep an eye on announcements in Discord for updates on the airdrop distribution process.
 
