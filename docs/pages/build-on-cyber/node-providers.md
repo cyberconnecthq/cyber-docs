@@ -1,7 +1,7 @@
 # Node Providers
 
 ## QuickNode
-[QuickNode](https://www.quicknode.com/) provides public and private rpc endpoints for Blast, along with websocket support.
+[QuickNode](https://www.quicknode.com/) provides public and private rpc endpoints for Cyber, along with websocket support.
 
 ### Supported Networks
 - Cyber Mainnet - Public RPC: https://rpc.cyber.co/

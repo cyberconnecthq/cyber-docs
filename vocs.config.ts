@@ -170,6 +170,7 @@ export default defineConfig({
               { text: "Foundry", link: "/build-on-cyber/foundry" },
               { text: "Hardhat", link: "/build-on-cyber/hardhat" },
               { text: "Remix", link: "/build-on-cyber/remix" },
+              { text: "Thirdweb", link: "/build-on-cyber/thirdweb"},
               {
                 text: "Verify Contract",
                 link: "/build-on-cyber/verify-contract",
