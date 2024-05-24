@@ -217,6 +217,10 @@ export default defineConfig({
         text: "Support",
         link: "/build-on-cyber/support",
       },
+      {
+        text: "FAQ",
+        link: "/build-on-cyber/faq",
+      }
     ],
 
     "/cyber-wallet": [
