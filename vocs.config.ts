@@ -178,6 +178,7 @@ export default defineConfig({
               { text: "Wagmi", link: "/build-on-cyber/wagmi" },
               { text: "Ethers.js", link: "/build-on-cyber/ethersjs" },
               { text: "Web3.js", link: "/build-on-cyber/web3js" },
+              { text: "Reservoir", link:"/build-on-cyber/reservoir"},
             ],
           },
           {

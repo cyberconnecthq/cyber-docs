@@ -34,3 +34,5 @@
 | SystemConfig                      | 0x726C6ac8A53061e56AfB2c890545348ba6f0DF0E |
 | SystemConfigProxy                 | 0x5D1F4bbaF6D484fA9D5D9705f92dE6063bff6055 |
 | SystemOwnerSafe                   | 0xc2259E7Fb719411f97aBdCdf449f6Ba3B9D75398 |
+| USDT                              | 0x6F6238c8eaea56F54Df418823585d61FDD7DE5Da |
+| USDC                              | 0x81759AdbF5520aD94da10991DfA29Ff147d3337b |
