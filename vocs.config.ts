@@ -147,6 +147,17 @@ export default defineConfig({
           },
         ],
       },
+
+      {
+        text: "Tutorials",
+        collapsed: false,
+        items: [
+          {
+            text:"Deploying a token using Thirdweb", link: "/build-on-cyber/thirdweb-cli"
+          },
+        ] 
+      },
+
       {
         text: "Contract Addresses",
         collapsed: false,
@@ -183,7 +194,7 @@ export default defineConfig({
           },
           {
             text: "Account Abstraction",
-            collapsed: false,
+            collapsed: true,
             items: [
               {
                 text: "ZeroDev",
