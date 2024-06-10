@@ -160,6 +160,7 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: "Bridges", link: "/build-on-cyber/bridges" },
+          { text: "Faucets", link: "/build-on-cyber/faucets" },
           { text: "Node Providers", link: "/build-on-cyber/node-providers" },
           { text: "Block Explorers", link: "/build-on-cyber/block-explorers" },
           { text: "Oracles", link: "/build-on-cyber/oracles" },
