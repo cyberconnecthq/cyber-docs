@@ -216,6 +216,10 @@ export default defineConfig({
                 text: "Turnkey",
                 link: "/build-on-cyber/account-abstraction/turnkey",
               },
+              {
+                text: "Privy",
+                link: "/build-on-cyber/account-abstraction/privy"
+              }
             ],
           },
         ],
