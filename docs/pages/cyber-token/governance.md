@@ -1,8 +1,8 @@
 # Governance
 
-It is intended that CYBER holders, stakers and delegates will have authority over Cyber L2 and CyberConnect Social Graph, along with their underlying protocols.
+It is intended that CYBER stakers will have authority over Cyber, the L2 for social, and CyberConnect Social Graph, along with their underlying protocols.
 
-CYBER stakers and CYBER holders are responsible for submitting, deliberating, and voting on governance proposals. CYBER holders can either vote directly or delegate their voting power to an eligible third party. CYBER stakers can vote directly using CYBER staked. However, this should not be the case indefinitely. When decentralized node operators (previously mentioned AVS operators) go online, they should vote using all the CYBER staked to them respectively.
+CYBER stakers are responsible for submitting, deliberating, and voting on governance proposals. Staked CYBER, via derivative tokens cCYBER and stCYBER, grants holders the ability to submit and vote on governance proposals, directly influencing the ecosystem's future. To participate in governance, CYBER holders must stake their CYBER and hold cCYBER or stCYBER.
 
 Specialized councils are formed with high-context delegates to streamline processes and make high-context judgments. The first council created is the [Grants Council](https://app.charmverse.io/cyber-ecosystem-grants/). A well-constructed grants program is a great way to accelerate the ecosystem's growth and attract high-quality builders. The [Cyber Ecosystem Grants](https://app.charmverse.io/cyber-ecosystem-grants/) program has been set up, with a dedicate $2M worth of CYBER tokens, to support builders in growing a thriving social L2 ecosystem and accelerate the overall adoption of onchain social and web3. This program will establish a Grants Council of 4 members with a [CharmVerse](https://charmverse.io/) program manager. All grant proposals will follow a separate process different than described below.
 
@@ -16,7 +16,7 @@ All non-grant governance proposals must fall within one of the following categor
 
 **Proposal Process**
 
-Anyone can submit a proposal to governance. Proposals are rejected or accepted using a voting process. The proposal must be one of the valid proposal types listed below.
+Anyone who stakes CYBER can submit a proposal to governance. Proposals are rejected or accepted using a voting process. The proposal must be one of the valid proposal types listed below.
 
 **Voting Process**
 
@@ -28,7 +28,7 @@ The proposer submits a new discussion thread in the appropriate category. By the
 
 Week 2
 
-All CYBER stakers, CYBER holders, and delegates are invited to vote on proposals. A snapshot to determine voting power for stakers, holders, and delegates
+All CYBER stakers are invited to vote on proposals. A snapshot to determine voting power for stakers.
 
 The proposal is approved if it satisfies the following minimum vote thresholds:
 
