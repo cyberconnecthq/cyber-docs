@@ -2,52 +2,33 @@
 
 _Staking is not available in restricted countries, including the US, Canada, China, Iran, North Korea, the Syrian Arab Republic, and Cuba._
 
-The launch of the Cyber as a Layer 2 solution on the Ethereum network introduces Cyber Staking, a transformative feature that enables users to stake CYBER tokens, thereby securing the network by adding additional nodes to process transactions, earning voting rights, and receiving economic rewards. This innovative mechanism not only bolsters network security but also democratizes governance, allowing users to actively participate in decision-making processes.
+Cyber staking enables CYBER holders to stake their CYBER tokens, thereby securing the network, while granting them **economic rewards** and **voting rights**. This not only bolsters network security but also democratizes governance, allowing users to actively participate in decision-making processes.
 
-- Before the Cyber mainnet launch, staked CYBER cannot be unstaked. After the mainnet launch, the unstake process, which is at a CYBER holder’s discretion, will take 21 days.
+### Economic Rewards for Stakers
+5,500,000 CYBER has been initially allocated over the next several years to attract stakers with compelling rewards and ensure the long-term sustainability of network staking. Moving forward, staking rewards each year will be determined through DAO governance and are subject to change. However, significant staking rewards are anticipated.
 
-**Governance**
+### Voting Rights for Stakers
+Staked CYBER, via derivative tokens cCYBER and stCYBER, grants holders the ability to submit and vote on governance proposals, directly influencing the ecosystem's future. To participate in governance, CYBER holders must stake their CYBER and hold cCYBER or stCYBER.
 
-CYBER stakers along with CYBER holders can propose and vote on governance proposals on the use of community treasury, protocol upgrades, and council members.
+### How CYBER Mainnet Staking Works
+CYBER holders have two primary staking options: the Cyber Vault and Cyber Staking Pool contracts. Both options distribute rewards programmatically based on predefined rules, with the total staking rewards shared between users of both the Cyber Vault and Cyber Staking Pool.
 
-**Network Security**
+Both options issue tokens to stakers that represent their staked CYBER, enabling them to participate in governance while staking. Users of the Cyber Vault receive cCYBER, which is transferable and benefits from auto-compounded rewards. Users of the Staking Pool receive non-transferable and non-auto-compounding stCYBER. 
 
-Sequencers are at the core of a Layer 2 network, a centralized sequencer could have a negative impact, such as censoring user transactions, creating a single point of failure, and creating harmful MEVs. Cyber L2 utilizes EigenLayer's [Actively Validated Services](https://docs.eigenlayer.xyz/eigenlayer/overview/key-terms) (AVS) to build up the fundamental decentralized infrastructures such as sequencer, verifier, and CyberDB. Staked CYBER and restaked ETH are utilized as delegations to different AVS operators running these infrastructures, and a slashing mechanism is implemented to ensure operational integrity, optimize performance and maximize network security.
+### Cyber Vault
+The Cyber Vault is an EIP-4626 Vault contract that simplifies and enhances accessibility for staking on Cyber Mainnet. It offers auto-compounding, no minimum stake requirements, and instant liquidity through cCYBER.
 
-**Economic Rewards**
+The Cyber Vault operates similarly to stake management facilitators on Ethereum. It automates claiming and staking rewards, increasing the efficiency of staking. The Cyber Vault charges a 10% fee on rewards, which is used to fund the Cyber Treasury to support future rewards and to sustain ecosystem growth. This fee is comparable to most Staking-as-a-Service providers.
 
-The economic rewards for CYBER stakers comprise four parts:
+### Staking Pool
+The Staking Pool is a direct staking contract designed for holders with at least 1,000 CYBER. It offers a more hands-on approach with some additional restrictions, such as not offering auto-compounding or instant liquidity. This option may suit those who are more technical and hold significant amounts of CYBER. 
 
-1. CYBER Season 2 Rewards
-2. Ecosystem Airdrop
-3. Network Revenues Sharing
-4. CYBER Staking Incentives
+Compared to the Cyber Vault, the Staking Pool offers a more involved staking experience that requires manual interaction with smart contracts. Using the Staking Pool on Cyber Mainnet can be thought of as similar to direct staking on Ethereum which has additional requirements, including a minimum stake of 32 ETH and running a node. 
 
-**1. CYBER Season 2 Rewards**
+### Unstaking
+Holders of stCYBER and cCYBER typically face a 7-day unstaking period when unstaking their staked CYBER. However, because cCYBER is transferable, holders can immediately exit their staking position by swapping the asset on a DEX. In contrast, because stCYBER is non-transferable, therefore this immediate exit option is not available to its holders.
 
-To enhance network security and reward early loyal members of the Cyber community, 1,000,000 CYBER will be allocated to those who stake CYBER during the Season 2 Campaign. The campaign details can be found [here].
+![unstaking](/assets/unstaking.png)
 
-**2. Ecosystem Airdrop**
-
-Cyber attracts top-notch developers who are passionate about creating innovative services and products. The platform offers an ideal environment for these professionals to express their creativity and bring their ideas to life. As the Cyber ecosystem continues to thrive and expand, CYBER stakers enjoy the potential benefits of receiving airdrops and rewards from the ecosystem. These airdrops can serve as incentives, encouraging further participation and engagement within the Cyber community.
-
-_Unless stated otherwise, rewards are solely provided by third-party dApp developers. Rewards are not guaranteed with CYBER staking and are subject to change at any time. Your claiming and/or use of any rewards is at your sole risk. By staking Cyber you assume the risk of any damages or losses related to rewards, no party will indemnify or guarantee your rewards and you are solely responsible for the security of your rewards._
-
-**3. Network Revenue Sharing**
-
-CYBER is staked to AVS operators that run sequencers, verifiers, and CyberDB to enhance Cyber's security. In return, it is intended that CYBER stakers will share the revenue from these services programmatically.
-
-**4. Staking Incentives**
-
-To ensure ample rewards for CYBER stakers initially and long-term sustainability, a Staking Incentive of 5.5M CYBER has been specifically designed. In the first year following the mainnet launch, 2M CYBER will be distributed to the stakers. The total amount of CYBER incentives will gradually decrease over the subsequent 6 years.
-
-**Staking incentives [total 5.5%]**
-| year | incentives |
-| ---- | ---------- |
-| yr1 | 2% |
-| yr2 | 1.5% |
-| yr3 | 1% |
-| yr4 | 0.5% |
-| yr5 | 0.25% |
-| yr6 | 0.125% |
-| yr7 | 0.125% |
+_Legal Disclaimer
+The information in this communication is for informational purposes only and is neither an offer to purchase, nor a solicitation of an offer to sell, subscribe for or buy any CYBER, nor shall there be any sale, issuance or transfer of securities in any jurisdiction in contravention of applicable law._
