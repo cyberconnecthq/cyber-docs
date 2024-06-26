@@ -3,10 +3,14 @@
 
 ## GraphQL
 
+In CyberWallet, the CyberID is minted to the CyberAccount address owning by the EOA wallet. However, the CyberID can be transferred to another EOA/CyberAccount address. So when querying the CyberID holdings, we need to query the CyberAccount address and the EOA wallet address. Here is an example of how to query the CyberID holdings. 
+
+The exmaple shows that the EOA holds one CyberID and the CyberAccount holds two CyberIDs.
+
 request example
 ```graphql
 query {
-  wallet(address: "0xD9c208dB8d08365916C35473b97A390dDAA551B2", chainId: 10) {
+  wallet(address: "0x2E0446079705B6Bacc4730fB3EDA5DA68aE5Fe4D", chainId: 10) {
     cyberIds {
       totalCount
       pageInfo {
@@ -23,8 +27,35 @@ query {
         cursor
       }
     }
+    ... on GeneralWallet {
+      cyberAccounts {
+        edges {
+          node {
+            address
+            chainId
+            cyberIds {
+              totalCount
+              pageInfo {
+                hasNextPage
+                hasPreviousPage
+                startCursor
+                endCursor
+              }
+              edges {
+                node {
+                  tokenId
+                  name
+                }
+                cursor
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
+
 ```
 
 response example
@@ -37,16 +68,51 @@ response example
         "pageInfo": {
           "hasNextPage": false,
           "hasPreviousPage": false,
-          "startCursor": "gaFp0wAAAAIAAAAD",
-          "endCursor": "gaFp0wAAAAIAAAAD"
+          "startCursor": "gaFpzwAAAAIABNb5",
+          "endCursor": "gaFpzwAAAAIABNb5"
         },
         "edges": [
           {
             "node": {
-              "tokenId": "85399087058221196933735331368181146816035410356131591160153355702122418658771",
-              "name": "pengdeng.cyber"
+              "tokenId": "100825946603575596559116553043502383673924335859128257978611995451204032790483",
+              "name": "pengdeng_crypto.cyber"
             },
-            "cursor": "gaFp0wAAAAIAAAAD"
+            "cursor": "gaFpzwAAAAIABNb5"
+          }
+        ]
+      },
+      "cyberAccounts": {
+        "edges": [
+          {
+            "node": {
+              "address": "0x6651Fa0D314C5b5818d60320C6809f6D5254Fdb9",
+              "chainId": 10,
+              "cyberIds": {
+                "totalCount": 2,
+                "pageInfo": {
+                  "hasNextPage": false,
+                  "hasPreviousPage": false,
+                  "startCursor": "gaFpzwAAAAIAAADd",
+                  "endCursor": "gaFpzwAAAAIAAxE0"
+                },
+                "edges": [
+                  {
+                    "node": {
+                      "tokenId": "11527189254859138244284356481875939991877142832628553021790283721900744067035",
+                      "name": "peng.cyber"
+                    },
+                    "cursor": "gaFpzwAAAAIAAADd"
+                  },
+                  {
+                    "node": {
+                      "tokenId": "37914373758897262772835640952534568580069934000688553339264814582153787252397",
+                      "name": "pengdengcyber.cyber"
+                    },
+                    "cursor": "gaFpzwAAAAIAAxE0"
+                  }
+                ]
+              }
+            }
           }
         ]
       }
