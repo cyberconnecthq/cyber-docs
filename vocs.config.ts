@@ -226,10 +226,6 @@ export default defineConfig({
         ],
       },
 
-      //{
-      // text: "FAQ", link: "/build-on-cyber/faq"
-      //},
-
       {
         text: "Support",
         link: "/build-on-cyber/support",
@@ -367,6 +363,7 @@ export default defineConfig({
     ],
   },
   topNav: [
+    { text: "Overview", link: "https://docs.cyber.co/" },
     { text: "Build on Cyber", link: "/build-on-cyber/network-info" },
     { text: "SDKs", link: "/sdk/cyber-account" },
     { text: "CyberWallet", link: "/cyber-wallet/overview" },
