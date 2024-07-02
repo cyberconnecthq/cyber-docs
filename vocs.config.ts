@@ -155,6 +155,9 @@ export default defineConfig({
           {
             text:"Deploying a token using Thirdweb", link: "/build-on-cyber/thirdweb-cli"
           },
+          {
+            text: "Building a dApp using Thirdweb SDK", link: "/build-on-cyber/thirdweb-sdk"
+          },
         ] 
       },
 
