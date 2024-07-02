@@ -155,6 +155,9 @@ export default defineConfig({
           {
             text:"Deploying a token using Thirdweb", link: "/build-on-cyber/thirdweb-cli"
           },
+          {
+            text: "Building a dApp using Thirdweb SDK", link: "/build-on-cyber/thirdweb-sdk"
+          },
         ] 
       },
 
@@ -363,7 +366,7 @@ export default defineConfig({
     ],
   },
   topNav: [
-    { text: "Overview", link: "https://docs.cyber.co/" },
+    { text: "Overview", link: "/", match: "/index" },
     { text: "Build on Cyber", link: "/build-on-cyber/network-info" },
     { text: "SDKs", link: "/sdk/cyber-account" },
     { text: "CyberWallet", link: "/cyber-wallet/overview" },
