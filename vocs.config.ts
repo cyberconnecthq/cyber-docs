@@ -158,6 +158,9 @@ export default defineConfig({
           {
             text: "Building a dApp using Thirdweb SDK", link: "/build-on-cyber/thirdweb-sdk"
           },
+          {
+            text: "Build your own crowdfunding dApp", link: "/build-on-cyber/crowdfunding"
+          },
         ] 
       },
 
