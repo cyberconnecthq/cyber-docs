@@ -71,15 +71,11 @@ export default defineConfig({
         ],
       },
       {
-        text: "Cyber Token",
+        text: "CYBER Token",
         collapsed: false,
         items: [
           { text: "Overview", link: "/cyber-token/overview" },
           { text: "Token Address", link: "/cyber-token/token-address" },
-          {
-            text: "Governance",
-            link: "/cyber-token/governance",
-          },
           {
             text: "Staking",
             link: "/cyber-token/staking",
@@ -88,6 +84,25 @@ export default defineConfig({
             text: "CYBER Token Distribution",
             link: "/cyber-token/distribution",
           },
+        ],
+      },
+      {
+        text: "Governance",
+        collapsed: false,
+        items: [
+          { text: "Working Constitution", link: "/governance/constitution" },
+          {
+            text: "Delegates",
+            collapsed: false,
+            items: [
+              { text: "Delegate Overview", link: "/governance/delegate-overview" },
+              { text: "Delegate Expectations", link: "/governance/delegate-expectation" },
+              { text: "Delegate Code of Conduct", link: "/governance/code-of-conduct" },
+            ],
+          },
+          {
+            text: "Grants", link: "/governance/grants"
+          }
         ],
       },
       {
