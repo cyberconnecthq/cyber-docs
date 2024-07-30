@@ -90,7 +90,9 @@ export default defineConfig({
         text: "Governance",
         collapsed: false,
         items: [
-          { text: "Working Constitution", link: "/governance/constitution" },
+          { text: "Working Constitution of CyberDAO", link: "/governance/constitution" },
+          { text: "Processes & Governance Procedures", link: "/governance/processes" },
+          { text: "The Cyber Foundation", link: "/governance/cyber-foundation"},
           {
             text: "Delegates",
             collapsed: false,
