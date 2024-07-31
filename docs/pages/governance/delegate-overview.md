@@ -8,4 +8,4 @@ As a delegate, you must follow the [CyberDAO Constitution](/governance/constitut
 
 ## Participate in Delegation
 
-Learn more about the delegates of CyberDAO, delegate your voting power, and explore becoming a delegate by creating your delegate statement on the Cyber Governance Portal on Agora.
+Learn more about the delegates of CyberDAO, delegate your voting power, and explore becoming a delegate by creating your delegate statement on the [Cyber Governance Hub](http://gov.cyber.co/) on Agora.
