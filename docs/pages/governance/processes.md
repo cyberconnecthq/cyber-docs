@@ -82,10 +82,10 @@ The different requirements for submission and approval of each Proposal Type are
     
 | Proposal Type | Quorum | Approval Threshold |
 | --- | --- | --- |
-| Community Treasury | 20% | 51% |
-| Protocol Upgrade | 20% | 76% |
-| Council | 20% | 51% |
-| Constitutional Ratification & Amendments | 20% | 67% |
+| Community Treasury | 30% | 51% |
+| Protocol Upgrade | 30% | 76% |
+| Council | 30% | 51% |
+| Constitutional Ratification & Amendments | 30% | 67% |
 
 - **Stage 3: Timelock**
 
@@ -103,4 +103,4 @@ CyberDAO will later explore electing a Security Council to advance towards mor
 
 ## **Section4: Amendments to the Constitution by Majority Vote**
 
-This is a version of the governance processes and procedures for CyberDAO. Both this document and the Working Constitution will evolve continuously. The current Working Constitution, after ratification through a vote, will remain in effect until changed, with a mandatory review every year after publishing. Any proposed amendments to the constitution require a two-thirds majority vote with a minimum of 20% token participation (quorum) to be passed.
+This is a version of the governance processes and procedures for CyberDAO. Both this document and the Working Constitution will evolve continuously. The current Working Constitution, after ratification through a vote, will remain in effect until changed, with a mandatory review every year after publishing. Any proposed amendments to the constitution require a two-thirds majority vote with a minimum of 30% token participation (quorum) to be passed.
