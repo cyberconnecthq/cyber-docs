@@ -225,6 +225,10 @@ export default defineConfig({
                 link: "/build-on-cyber/account-abstraction/zerodev",
               },
               {
+                text: "thirdweb",
+                link: "/build-on-cyber/account-abstraction/thirdweb",
+              },
+              {
                 text: "Pimlico",
                 link: "/build-on-cyber/account-abstraction/pimlico",
               },
