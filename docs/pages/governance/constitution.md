@@ -1,6 +1,6 @@
 # Working Constitution of CyberDAO
 
-*Note: This is a "Working" Constitution and is subject to change. It will evolve with the continuous contributions from the Cyber community. The current and first version of the Working Constitution will be ratified through a vote in August.*
+*Note: This is a "Working" Constitution and is subject to change. The first version of the Working Constitution was ratified on August 24, 2024 by [vote from CyberDAO](https://gov.cyber.co/proposals/7021164072602929922775875300186847497427943811385239539386505941445523083641).  It will evolve with the continuous contributions from the Cyber community, and future changes will be ratified through votes by the DAO.*
 
 ----
 
