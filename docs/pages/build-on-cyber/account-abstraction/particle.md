@@ -1,4 +1,4 @@
-## Particle Network Wallet-as-a-Service
+# Particle Network Wallet-as-a-Service
 
 Particle Network's Wallet-as-a-Service integrates decentralized wallet functionality with social logins into web applications. With minimal setup, developers can leverage Particle's powerful SDKs to enable 2-click onboarding into smart accounts through social logins and leverage Account Abstraction features.
 
