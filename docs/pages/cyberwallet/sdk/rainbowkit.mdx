@@ -1,0 +1,35 @@
+# RainbowKit
+
+CyberWallet SDK provides a customized wallet for RainbowKit. You can install `@cyberlab/rainbowkit` to integrate with CyberWallet.
+
+## Installation
+
+```bash
+npm install @cyberlab/rainbowkit
+```
+
+## Add CyberWallet into the Wallet List
+
+You can follow the instructions [here](https://www.rainbowkit.com/docs/custom-wallet-list) to learn more about customizing the RainbowKit wallet list.
+
+```javascript
+// Rainbowkit config file
+import { cyberWallet } from '@cyberlab/cyberwallet-sdk';
+import { connectorsForWallets } from '@rainbow-me/rainbowkit';
+
+const connectors = connectorsForWallets(
+  [
+    {
+      groupName: 'Recommended',
+      wallets: [
+        cyberWallet // Add CyberWallet to the list
+        ...,
+      ],
+    },
+  ],
+   {
+      appName: 'My RainbowKit App',
+      projectId: 'YOUR_PROJECT_ID',
+    }
+);
+```

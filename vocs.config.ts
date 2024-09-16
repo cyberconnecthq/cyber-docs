@@ -294,7 +294,13 @@ export default defineConfig({
           { text: "Getting Started", link: "/cyberwallet/sdk/getting-started" },
           {
             text: "Third-party Integrations",
-            items: [{ text: "Web3.js", link: "/cyberwallet/sdk/web3-js" }],
+            items: [
+              { text: "Viem", link: "/cyberwallet/sdk/viem" },
+              { text: "Wagmi", link: "/cyberwallet/sdk/wagmi" },
+              { text: "RainbowKit", link: "/cyberwallet/sdk/rainbowkit" },
+              { text: "Ethers", link: "/cyberwallet/sdk/ethers" },
+              { text: "Web3.js", link: "/cyberwallet/sdk/web3-js" },
+            ],
           },
         ],
       },
