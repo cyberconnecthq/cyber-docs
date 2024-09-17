@@ -1,21 +1,40 @@
 # Getting Started
 
-CyberWallet SDK is a collection of tools that allow developers to integrate CyberWallet into their dapps. The SDK provides a simple and secure way to connect to CyberWallet and interact with the Cyber mainnet.
+CyberWallet SDK is a collection of tools that allow developers to integrate [CyberWallet](https://passkey.cyber.co) into their dapps. The SDK provides a simple and secure way to connect to [CyberWallet](https://passkey.cyber.co) and interact with the Cyber mainnet.
 
+## Preparation
 
-## Supported Environments
+Before starting, you need to go to the [Cyber Developer Center](https://dashboard.cyberconnect.me) to create a project and get your project ID.
 
-CyberWallet SDK only supports dapps in the browser environment.
+## Thrid-party Library Integration
+
+CyberWallet SDK supports integration with the following libraries:
+
+* [Viem](/cyberwallet/sdk/viem)
+* [Wagmi](/cyberwallet/sdk/wagmi)
+* [RainbowKit](/cyberwallet/sdk/rainbowkit)
+* [Ethers](/cyberwallet/sdk/ethers)
+* [Web3.js](/cyberwallet/sdk/web3-js)
+
+## Singature Validation
+
+When signing messages with CyberWallet, the signature format will be different depending on whether the account has been deployed.
+
+If the account has not been deployed, the signature will be wrapped in [ERC-6492](https://eips.ethereum.org/EIPS/eip-6492) format, you'll need to validate the signature following the [ERC-6492](https://eips.ethereum.org/EIPS/eip-6492) standard. For deployed accounts, follow the [ERC-1271](https://eips.ethereum.org/EIPS/eip-1271) standard.
+
+## Packages and Supported Environments
+
+| Package | Description | Environment |
+| --- | --- | --- |
+| [@cyberlab/cyberwallet-sdk](https://www.npmjs.com/package/@cyberlab/cyberwallet-sdk) |  The main package | Browser |
+| [@cyberlab/wagmi](https://www.npmjs.com/package/@cyberlab/wagmi) | Wagmi integration | Browser |
+| [@cyberlab/rainbowkit](https://www.npmjs.com/package/@cyberlab/rainbowkit) | RainbowKit integration | Browser |
 
 ## Supported Networks
 
-Mainnets:
-* Cyber Mainnet
+| Network | Chain ID | Type |
+| --- | --- | --- |
+| Cyber | 7560 | Mainnet |
+| Cyber Testnet | 111557560	| Testnet |
 
-Testnets:
-* Cyber Testnet
-
-## Singature Validation with EIP-6492
-
-If your dapp has features that needs to validate the signature like SIWE (Sign-In with Ethereum
-), you'll needs to implement EIP-6492 to support that. You can find the EIP-6492 detail [here](https://eips.ethereum.org/EIPS/eip-6492).
+*Mainnets are only available at [passkey.cyber.co](https://passkey.cyber.co), and testnets are available at [stg.passkey.cyber.co](https://stg.passkey.cyber.co).*

@@ -73,6 +73,10 @@ const sign = async () => {
 
 It will open the CyberWallet sign message page and ask the user to sign using the same Passkey. After the user confirms, CyberWallet will return the signature.
 
+:::warning
+If the account has not been deployed, the signature will be wrapped in [ERC-6492](https://eips.ethereum.org/EIPS/eip-6492) format, you'll need to validate the signature following the [ERC-6492](https://eips.ethereum.org/EIPS/eip-6492) standard. For deployed accounts, follow the [ERC-1271](https://eips.ethereum.org/EIPS/eip-1271) standard.
+:::
+
 ### 5. Send a transaction
 ```javascript
 // sendTx
