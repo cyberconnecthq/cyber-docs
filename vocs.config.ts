@@ -87,24 +87,51 @@ export default defineConfig({
         ],
       },
       {
+        text: "CyberID",
+        collapsed: false,
+        items: [
+          { text: "Overview", link: "/cyber-id/overview" },
+          { text: "Features", link: "/cyber-id/features" },
+        ],
+      },
+      {
         text: "Governance",
         collapsed: false,
         items: [
-          { text: "Working Constitution of CyberDAO", link: "/governance/constitution" },
-          { text: "Processes & Governance Procedures", link: "/governance/processes" },
+          {
+            text: "Working Constitution of CyberDAO",
+            link: "/governance/constitution",
+          },
+          {
+            text: "Processes & Governance Procedures",
+            link: "/governance/processes",
+          },
           {
             text: "Delegates",
             collapsed: false,
             items: [
-              { text: "Delegate Overview", link: "/governance/delegate-overview" },
-              { text: "Delegate Expectations", link: "/governance/delegate-expectation" },
-              { text: "Delegate Code of Conduct", link: "/governance/code-of-conduct" },
+              {
+                text: "Delegate Overview",
+                link: "/governance/delegate-overview",
+              },
+              {
+                text: "Delegate Expectations",
+                link: "/governance/delegate-expectation",
+              },
+              {
+                text: "Delegate Code of Conduct",
+                link: "/governance/code-of-conduct",
+              },
             ],
           },
           {
-            text: "Grants", link: "/governance/grants"
+            text: "Grants",
+            link: "/governance/grants",
           },
-          { text: "The Cyber Foundation", link: "/governance/cyber-foundation"}
+          {
+            text: "The Cyber Foundation",
+            link: "/governance/cyber-foundation",
+          },
         ],
       },
       {
@@ -170,15 +197,18 @@ export default defineConfig({
         collapsed: false,
         items: [
           {
-            text:"Deploying a token using Thirdweb", link: "/build-on-cyber/thirdweb-cli"
+            text: "Deploying a token using Thirdweb",
+            link: "/build-on-cyber/thirdweb-cli",
           },
           {
-            text: "Building a dApp using Thirdweb SDK", link: "/build-on-cyber/thirdweb-sdk"
+            text: "Building a dApp using Thirdweb SDK",
+            link: "/build-on-cyber/thirdweb-sdk",
           },
           {
-            text: "Build your own crowdfunding dApp", link: "/build-on-cyber/crowdfunding"
+            text: "Build your own crowdfunding dApp",
+            link: "/build-on-cyber/crowdfunding",
           },
-        ] 
+        ],
       },
 
       {
@@ -205,7 +235,7 @@ export default defineConfig({
               { text: "Foundry", link: "/build-on-cyber/foundry" },
               { text: "Hardhat", link: "/build-on-cyber/hardhat" },
               { text: "Remix", link: "/build-on-cyber/remix" },
-              { text: "Thirdweb", link: "/build-on-cyber/thirdweb"},
+              { text: "Thirdweb", link: "/build-on-cyber/thirdweb" },
               {
                 text: "Verify Contract",
                 link: "/build-on-cyber/verify-contract",
@@ -213,7 +243,7 @@ export default defineConfig({
               { text: "Wagmi", link: "/build-on-cyber/wagmi" },
               { text: "Ethers.js", link: "/build-on-cyber/ethersjs" },
               { text: "Web3.js", link: "/build-on-cyber/web3js" },
-              { text: "Reservoir", link:"/build-on-cyber/reservoir"},
+              { text: "Reservoir", link: "/build-on-cyber/reservoir" },
             ],
           },
           {
@@ -246,7 +276,7 @@ export default defineConfig({
               },
               {
                 text: "Privy",
-                link: "/build-on-cyber/account-abstraction/privy"
+                link: "/build-on-cyber/account-abstraction/privy",
               },
             ],
           },
@@ -260,7 +290,7 @@ export default defineConfig({
       {
         text: "FAQ",
         link: "/build-on-cyber/faq",
-      }
+      },
     ],
 
     "/cyber-wallet": [
@@ -377,24 +407,24 @@ export default defineConfig({
         ],
       },
     ],
-    "/cyber-id": [
-      {
-        text: "CyberID",
-        collapsed: false,
-        items: [
-          { text: "Overview", link: "/cyber-id/overview" },
-          { text: "Query Owner", link: "/cyber-id/query-owner" },
-          { text: "Query Holdings", link: "/cyber-id/query-holdings" },
-        ],
-      },
-    ],
+    // "/cyber-id": [
+    //   {
+    //     text: "CyberID",
+    //     collapsed: false,
+    //     items: [
+    //       { text: "Overview", link: "/cyber-id/overview" },
+    //       { text: "Query Owner", link: "/cyber-id/query-owner" },
+    //       { text: "Query Holdings", link: "/cyber-id/query-holdings" },
+    //     ],
+    //   },
+    // ],
   },
   topNav: [
     { text: "Overview", link: "/", match: "/index" },
     { text: "Build on Cyber", link: "/build-on-cyber/network-info" },
     { text: "SDKs", link: "/sdk/cyber-account" },
     { text: "CyberWallet", link: "/cyber-wallet/overview" },
-    { text: "CyberID", link: "/cyber-id/overview" },
+    // { text: "CyberID", link: "/cyber-id/overview" },
   ],
   socials: [
     {
