@@ -1,0 +1,82 @@
+# Wagmi
+
+If you're using Wagmi in your project, you can install `@cyberlab/wagmi` to integrate with CyberWallet.
+
+## Installation
+
+```bash
+npm install @cyberlab/wagmi
+```
+## Usage
+
+`@cyberlab/wagmi` provides a customized connector for Wagmi. Follow the instructions in Wagmi to set up the configuration [here](https://wagmi.sh/react/guides/connect-wallet#_1-configure-wagmi), and add the CyberWallet connector into the config.
+
+```javascript
+import { http, createConfig } from 'wagmi';
+import { cyber, cyberTestnet } from 'wagmi/chains';
+import { createPublicClient } from 'viem';
+import { cyber as CyberWalletConnector} from '@cyberlab/cyberwallet-sdk';
+
+export const config = createConfig({
+  chains: [cyber], // make sure to include the Cyber chain
+  connectors: [CyberWalletConnector()],
+  transports: {
+    [Cyber.id]: http(),
+  },
+});
+
+// --- Set up the Wagmi provider ---
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { WagmiProvider } from 'wagmi'
+
+const queryClient = new QueryClient()
+
+function App() {
+ return (
+   <WagmiProvider config={config}>
+     <QueryClientProvider client={queryClient}>
+       {/** ... */}
+     </QueryClientProvider>
+   </WagmiProvider>
+ )
+}
+```
+
+after that, you can see the CyberWallet connector by using the `useConnect` hook.
+
+```javascript
+import * as React from 'react'
+import { Connector, useConnect } from 'wagmi'
+
+export function WalletOptions() {
+  const { connectors, connect } = useConnect()
+
+  return connectors.map((connector) => (
+    <button key={connector.uid} onClick={() => connect({ connector })}>
+      {connector.name}
+    </button>
+  ))
+}
+```
+
+## Sign a message
+
+```javascript
+import { useSignMessage } from 'wagmi'
+
+function App() {
+  const { signMessage } = useSignMessage()
+
+  return (
+    <button onClick={() => signMessage({ message: 'hello world' })}>
+      Sign message
+    </button>
+  )
+}
+```
+
+It will open the CyberWallet sign message page and ask the user to sign using the same Passkey. After the user confirms, CyberWallet will return the signature.
+
+:::warning
+If the account has not been deployed, the signature will be wrapped in [ERC-6492](https://eips.ethereum.org/EIPS/eip-6492) format, you'll need to validate the signature following the [ERC-6492](https://eips.ethereum.org/EIPS/eip-6492) standard. For deployed accounts, follow the [ERC-1271](https://eips.ethereum.org/EIPS/eip-1271) standard.
+:::

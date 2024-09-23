@@ -1,7 +1,0 @@
-# Authentication
-
-> Currently, only an EOA (Externally Owned Account) can be the owner of a CyberWallet.
-
-In theory, CyberWallet can use any authentication model to verify the owner's identity. However, we currently use the [`ECDSAValidator`](https://github.com/zerodevapp/kernel/blob/main/src/validator/ECDSAValidator.sol) as the default validator to validate signatures by [ZeroDev Kernel Validation mechanism](https://github.com/zerodevapp/kernel/blob/eafc8f7694b641c28d64c0631b062d0df167ee22/src/Kernel.sol#L87C106-L87C106).
-
-Each CyberWallet has one owner, and the signature is verified using ECDSA. Therefore, the owner of a CyberWallet cannot be another smart contract wallet because a smart contract wallet cannot sign messages using ECDSA. However, this can be supported by using other validators in the future.
