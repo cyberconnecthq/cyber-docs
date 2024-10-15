@@ -29,4 +29,4 @@
 | SystemConfig                      | 0x59D9B22bf650f443A12bfDfaf24c97Ab929456ab |
 | SystemConfigProxy                 | 0x43b838Aa237B27c4fC953E591594CEBb1CA2817F |
 | SystemOwnerSafe                   | 0x642A102cD63f039930f99b4657f41Fd4AD7699d6 |
-
+| WETH                              | 0x4200000000000000000000000000000000000006 |

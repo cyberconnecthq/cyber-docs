@@ -5,6 +5,7 @@
 | AddressManager                    | 0x19b5804B88F10262A55ac731f28A3BbC4209853a |
 | DataAvailabilityChallenge         | 0x0d93eAA86eb6948b977857750A5512Bef6B05C51 |
 | DataAvailabilityChallengeProxy    | 0x10E34EfE14E4D270C0f77Bf1aF01b6C832161B49 |
+| WETH                              | 0x4200000000000000000000000000000000000006 |
 | DelayedWETH                       | 0x6dAf222AD565522Bfc1D9Ef3cc78751f6c007e6d |
 | DelayedWETHProxy                  | 0x588dAd44201885ff23068f1142e303D52d103919 |
 | DisputeGameFactory                | 0xB79cF113e524043B3eF9bf7861a05900BB3649a3 |
