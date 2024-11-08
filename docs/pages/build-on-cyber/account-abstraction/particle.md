@@ -173,7 +173,7 @@ After configuring the SDK, you can integrate social logins and Account Abstracti
 
 With **Particle Connect** now configured, you can proceed to enable social logins within your application through the aforementioned `ConnectButton` component.
 
-Additionally, for driving application-level interaction (after initial onboarding), `@particle-network/connectkit` provides a variety of hooks. You can explore all available hooks in the [Particle Connect SDK documentation](/api-reference/connect/desktop/web#key-react-hooks-for-particle-connect).
+Additionally, for driving application-level interaction (after initial onboarding), `@particle-network/connectkit` provides a variety of hooks. You can explore all available hooks in the [Particle Connect SDK documentation](https://developers.particle.network/api-reference/connect/desktop/web#key-react-hooks-for-particle-connect).
 
 The boilerplate application includes a basic example featuring only a **Connect** button (`ConnectButton`).
 
