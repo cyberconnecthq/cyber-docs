@@ -223,6 +223,7 @@ export default defineConfig({
         text: "Resources and Tools",
         collapsed: false,
         items: [
+          { text: "Uniswap", link: "/build-on-cyber/uniswap" },
           { text: "Bridges", link: "/build-on-cyber/bridges" },
           { text: "Faucets", link: "/build-on-cyber/faucets" },
           { text: "Node Providers", link: "/build-on-cyber/node-providers" },
