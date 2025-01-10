@@ -35,7 +35,7 @@ The CLI will guide you through a setup process; it will prompt you to enter a pr
 
 ```
 
-The CLI will inizialize a fully configured project.
+The CLI will initialize a fully configured project.
 
 ### Configuration
 
