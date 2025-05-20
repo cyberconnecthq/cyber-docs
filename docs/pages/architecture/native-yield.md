@@ -1,3 +1,0 @@
-# Native Yield
-
-After [The Merge](https://ethereum.org/en/roadmap/merge/), it’s common to see protocol providing convenient Ethereum staking service for users to generate yields on their native ETH. The staking system plays a crucial role in Ethereum’s PoS model. However, almost all current Layer 2 solutions lack the yield generation for assets bridged into Layer 2. Cyber L2 introduces the native yield for bridged assets so that the whole ecosystem's users can benefit from the increased capital efficiency and it paves the way for new business models for dApps that were previously impractical on other L2s.

@@ -1,15 +1,15 @@
-# Deploy your first Smart Contract on Cyber L2
-In this tutorial we will be learning how to deploy a simple smart contracts on Cyber L2 using **Forge in Foundry**. 
+# Deploy your first Smart Contract on Cyber Network
+In this tutorial we will be learning how to deploy a simple smart contracts on Cyber Network using **Forge in Foundry**. 
 
 ## Step 1: Pre-requisites
 
 Before deploying your smart contract, ensure you have completed the following:
 
 1. **Add Cyber Testnet to MetaMask**  
-   Follow the [Guide for adding the Cyber network](/build-on-cyber/connecting-wallet) to your MetaMask wallet.
+   Follow the [Guide for adding the Cyber network](/get-started/connecting-wallet) to your MetaMask wallet.
 
 2. **Bridging Assets to Cyber Testnet**  
-   Use the [Bridging assets to Cyber guide](/build-on-cyber/bridging-assets) to transfer assets from other networks to Cyber so you have funds available for deployment.
+   Use the [Bridging assets to Cyber guide](/get-started/bridging-assets) to transfer assets from other networks to Cyber so you have funds available for deployment.
 
 ## Step 2: Install Foundry
 
@@ -79,5 +79,5 @@ Visit our [Ecosystem builder form](https://cyber.deform.cc/ecosystem-builder) an
 
 After verifying your **Mainnet** contract deployment and form submission, you will receive an NFT airdrop to the provided wallet address. Keep an eye on announcements in Discord for updates on the airdrop distribution process.
 
-#### If you face any issues, feel free to reach out to our engineers for [Support](/build-on-cyber/support.md).
+#### If you face any issues, feel free to reach out to our engineers for [Support](/support.md).
 

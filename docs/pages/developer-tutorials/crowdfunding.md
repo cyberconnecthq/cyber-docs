@@ -291,4 +291,4 @@ You will be able to deploy the contract and hardhat will return the deployed con
 - You can verify the contract address by visiting the [Cyber explorer](https://cyber-testnet.socialscan.io/)
 
 ## Conclusion
-You've successfully deployed a crowdfunding contract on Cyber Testnet. Continue to explore and leverage Cyber L2's features to create a frontend to interact with the contract and share your project within the developer community. If you face any issues, feel free to reach out to our engineers for [Support](/build-on-cyber/support.md).
+You've successfully deployed a crowdfunding contract on Cyber Testnet. Continue to explore and leverage Cyber L2's features to create a frontend to interact with the contract and share your project within the developer community. If you face any issues, feel free to reach out to our engineers for [Support](/support.md).

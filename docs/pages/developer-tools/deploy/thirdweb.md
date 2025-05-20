@@ -25,7 +25,7 @@ Input the following to confirgure your project in CLI:
 - What type of contract do you want to start from?
 - What extension do you want to add to your contract?
 
-Thirdweb gives you the flexibility to chose the suitable options. Example, You can create a new project using [Hardhat](/build-on-cyber/hardhat) or [Forge](/build-on-cyber/foundry) and add optional [extensions](https://portal.thirdweb.com/typescript/v5/extensions).
+Thirdweb gives you the flexibility to chose the suitable options. Example, You can create a new project using [Hardhat](/developer-tools/deploy/hardhat) or [Forge](/developer-tools/deploy/foundry) and add optional [extensions](https://portal.thirdweb.com/typescript/v5/extensions).
 
 ### 3. Deploying a smart contract:
 
@@ -156,4 +156,4 @@ Use the following command to deploy your static web application on IPFS:
 npx thirdweb deploy --app
 ````
 
-If you face any issues, feel free to reach out to our engineers for [Support](/build-on-cyber/support.md) or to thirdweb support at [support.thirdweb.com](support.thirdweb.com)
+If you face any issues, feel free to reach out to our engineers for [Support](/support.md) or to thirdweb support at [support.thirdweb.com](support.thirdweb.com)

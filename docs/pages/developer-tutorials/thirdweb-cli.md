@@ -11,7 +11,7 @@ Before we begin, ensure you have the following:
 npx thirdweb install
 ```
 
-- Cyber mainnet/ testnet added to the wallet. [Check the guide to add Cyber to the wallet](https://docs.cyber.co/build-on-cyber/connecting-wallet)
+- Cyber mainnet/ testnet added to the wallet. [Check the guide to add Cyber to the wallet](/get-started/connecting-wallet)
 - An active [thirdweb account](https://thirdweb.com/dashboard) connected to a wallet loaded with ETH for gas fees.
 
 
@@ -111,5 +111,5 @@ You can finish the publishing process by adding contract details.
 
 ## Conclusion
 
-You've successfully deployed an ERC20 token on the Cyber mainnet using thirdweb tools. Continue to explore and leverage thirdweb's features to enhance your projects with Cyber and share your achievements within the developer community. If you face any issues, feel free to reach out to our engineers for [Support](/build-on-cyber/support.md).
+You've successfully deployed an ERC20 token on the Cyber mainnet using thirdweb tools. Continue to explore and leverage thirdweb's features to enhance your projects with Cyber and share your achievements within the developer community. If you face any issues, feel free to reach out to our engineers for [Support](/support.md).
 

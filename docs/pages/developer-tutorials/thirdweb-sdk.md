@@ -90,4 +90,4 @@ Navigate to the localhost address from the terminal to view the dAPP
 
 ## Conclusion
 
-You've successfully deployed a dAPP on Cyber Testnet using thirdweb SDK. Continue to explore and leverage thirdweb's features to enhance your projects with Cyber and share your achievements within the developer community. If you face any issues, feel free to reach out to our engineers for [Support](/build-on-cyber/support.md).
+You've successfully deployed a dAPP on Cyber Testnet using thirdweb SDK. Continue to explore and leverage thirdweb's features to enhance your projects with Cyber and share your achievements within the developer community. If you face any issues, feel free to reach out to our engineers for [Support](/support.md).

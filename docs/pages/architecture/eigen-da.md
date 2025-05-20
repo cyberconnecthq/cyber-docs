@@ -1,5 +1,0 @@
-# EigenDA
-
-In the roll-up pattern, the sequencer will post blocks of transactions to Ethereum or a separate data availability service. While posting transaction data directly to Ethereum is a secure option, its data availability capability is not currently scalable, nor is it likely to become highly scalable in the near future. Cyber L2 leverages EigenLayer’s data availability infrastructure (EigenDA) as an innovative solution to reduce transaction costs for users significantly. The EigenDA is highly scalable and utilizes the novel idea of pooled security via restaking.
-
-In particular, the restaking mechanism allows Ethereum validators to set their beacon chain withdrawal credentials to the EigenLayer smart contracts and opt for new modules (e.g., EigenDA) built on EigenLayer. The validators download and run any additional node software required for these modules. The modules then can impose additional slashing conditions on the staked ETH of validators who opted into the module. In such a way, the EigenDA can inherit security directly from Ethereum stakes.

@@ -10,7 +10,7 @@ This document also describes the processes for the constitution’s amendment an
 
 ## Section 1: CyberDAO and the Constitution
 
-CyberDAO represents a diverse community of users, builders, token holders, and broader stakeholders engaged in the Cyber ecosystem. At its core, CyberDAO operates as a community-driven governance mechanism, empowering participants to propose and vote on changes to both the organization and the technologies it manages. See the [Working Constitution](https://docs.cyber.co/governance/constitution). 
+CyberDAO represents a diverse community of users, builders, token holders, and broader stakeholders engaged in the Cyber ecosystem. At its core, CyberDAO operates as a community-driven governance mechanism, empowering participants to propose and vote on changes to both the organization and the technologies it manages. See the [Working Constitution](/governance/constitution). 
 
 Cyber is a Layer 2 blockchain designed specifically for social applications. Built on the Optimism Superchain, Cyber facilitates the creation of onchain apps that enrich social connections, strengthen community, and foster collaboration. By combining high-performance infrastructure with custom tooling, Cyber streamlines workflows and accelerates developers' time to market.
 
