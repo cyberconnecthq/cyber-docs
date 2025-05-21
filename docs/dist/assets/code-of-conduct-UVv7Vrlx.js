@@ -1,0 +1,17 @@
+import{u as a,j as e}from"./index-DHgfUVSx.js";const o={title:"Delegate Code of Conduct",description:"undefined"};function i(t){const n={a:"a",div:"div",h1:"h1",h3:"h3",header:"header",p:"p",...a(),...t.components};return e.jsxs(e.Fragment,{children:[e.jsx(n.header,{children:e.jsxs(n.h1,{id:"delegate-code-of-conduct",children:["Delegate Code of Conduct",e.jsx(n.a,{"aria-hidden":"true",tabIndex:"-1",href:"#delegate-code-of-conduct",children:e.jsx(n.div,{"data-autolink-icon":!0})})]})}),`
+`,e.jsxs(n.h3,{id:"good-faith",children:["Good Faith",e.jsx(n.a,{"aria-hidden":"true",tabIndex:"-1",href:"#good-faith",children:e.jsx(n.div,{"data-autolink-icon":!0})})]}),`
+`,e.jsx(n.p,{children:"Delegates should act at all times with honesty, integrity, and transparency."}),`
+`,e.jsxs(n.h3,{id:"best-interest",children:["Best Interest",e.jsx(n.a,{"aria-hidden":"true",tabIndex:"-1",href:"#best-interest",children:e.jsx(n.div,{"data-autolink-icon":!0})})]}),`
+`,e.jsx(n.p,{children:"Delegates should operate and vote in what they believe is in the best interests of the Cyber community."}),`
+`,e.jsxs(n.h3,{id:"due-care-and-attention",children:["Due Care and Attention",e.jsx(n.a,{"aria-hidden":"true",tabIndex:"-1",href:"#due-care-and-attention",children:e.jsx(n.div,{"data-autolink-icon":!0})})]}),`
+`,e.jsx(n.p,{children:"Delegates should conduct a professional and unbiased review of each proposal before casting their vote."}),`
+`,e.jsxs(n.h3,{id:"communication",children:["Communication",e.jsx(n.a,{"aria-hidden":"true",tabIndex:"-1",href:"#communication",children:e.jsx(n.div,{"data-autolink-icon":!0})})]}),`
+`,e.jsx(n.p,{children:"Delegates should ensure that the rationale behind each of their votes is communicated in a clear and accessible manner."}),`
+`,e.jsxs(n.h3,{id:"professional-knowledge",children:["Professional Knowledge",e.jsx(n.a,{"aria-hidden":"true",tabIndex:"-1",href:"#professional-knowledge",children:e.jsx(n.div,{"data-autolink-icon":!0})})]}),`
+`,e.jsx(n.p,{children:"Delegates should maintain a working knowledge of developments within Cyber and the broader cryptocurrency sector."}),`
+`,e.jsxs(n.h3,{id:"conflicts-of-interest",children:["Conflicts of Interest",e.jsx(n.a,{"aria-hidden":"true",tabIndex:"-1",href:"#conflicts-of-interest",children:e.jsx(n.div,{"data-autolink-icon":!0})})]}),`
+`,e.jsx(n.p,{children:"Delegates should avoid conflicts of interest where feasible and manage their impact when avoidance is not possible. Any conflicts should be disclosed in writing. Any offer of external compensation related to delegation or the Cyber community should be made public."}),`
+`,e.jsxs(n.h3,{id:"availability",children:["Availability",e.jsx(n.a,{"aria-hidden":"true",tabIndex:"-1",href:"#availability",children:e.jsx(n.div,{"data-autolink-icon":!0})})]}),`
+`,e.jsx(n.p,{children:"Delegates should be accessible to the community, within reason, to answer questions, respond to comments, and engage in discussions."}),`
+`,e.jsxs(n.h3,{id:"end-of-delegation",children:["End of Delegation",e.jsx(n.a,{"aria-hidden":"true",tabIndex:"-1",href:"#end-of-delegation",children:e.jsx(n.div,{"data-autolink-icon":!0})})]}),`
+`,e.jsx(n.p,{children:"Delegates should announce their intention to resign at least one month in advance to provide stakeholders using Cyber sufficient time to reallocate their assets to another delegate."})]})}function s(t={}){const{wrapper:n}={...a(),...t.components};return n?e.jsx(n,{...t,children:e.jsx(i,{...t})}):i(t)}export{s as default,o as frontmatter};
