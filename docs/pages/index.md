@@ -29,7 +29,6 @@ Cyber AI is a domain-focused AI model that combines onchain data with off-chain 
 ## 3. CYBER Token
 
 CYBER is a multichain OFT (Omnichain Fungible Token) that serves as the network’s utility and governance token. It has a total supply of **100 million.** CYBER holders can stake their tokens to participate in on-chain governance, secure the network, and earn rewards while receiving staking tokens called cCYBER or stCYBER.
-
 | Chain | Address |
 | --- | --- |
 | Ethereum | 0x14778860E937f509e651192a90589dE711Fb88a9 |
