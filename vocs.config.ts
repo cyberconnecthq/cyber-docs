@@ -9,9 +9,10 @@ export default defineConfig({
   sidebar: {
     '/': [
       {
-        text: 'Introduction',
+        text: '',
         collapsed: false,
         items: [
+          { text: 'Overview', link: '/' },
           { text: 'Cyber L2', link: '/cyber-l2' },
           {
             text: 'Cyber AI',
@@ -19,7 +20,7 @@ export default defineConfig({
           },
           {
             text: '$CYBER Token',
-            collapsed: true,
+            collapsed: false,
             items: [
               { text: 'Overview', link: '/cyber-token/overview' },
               { text: 'Token Address', link: '/cyber-token/token-address' },
@@ -37,7 +38,7 @@ export default defineConfig({
       },
       {
         text: 'Network Info & References',
-        collapsed: true,
+        collapsed: false,
         items: [
           { text: 'Chain Info', link: '/network-info/overview' },
           { text: 'Mainnet Contract Addresses', link: '/network-info/mainnet-addresses' },
