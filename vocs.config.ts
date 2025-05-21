@@ -6,8 +6,6 @@ export default defineConfig({
   theme: {
     accentColor: { light: "#0c9b00", dark: "#07DC10" },
   },
-  banner:
-    "**Cyber Mainnnet** is live! Learn [how to build on Cyber](/network-info/overview).",
   sidebar: {
     "/": [
       {
@@ -15,6 +13,10 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: "Cyber L2", link: "/cyber-l2" },
+          {
+            text: "Cyber AI",
+            link: "/cyber-ai",
+          },
           {
             text: "$CYBER Token",
             collapsed: false,
@@ -50,7 +52,7 @@ export default defineConfig({
           { text: "Bridge Assets", link: "/get-started/bridging-assets" },
           { text: "Deploy Contract", link: "/get-started/deploying-contract" },
           {
-            text: "CyberID", collapsed: false, items: [
+            text: "CyberID", collapsed: true, items: [
               { text: "Overview", link: "/cyber-id/overview" },
               { text: "Features", link: "/cyber-id/features" },
               { text: "Query CyberID Holdings", link: "/cyber-id/query-holdings" },
@@ -61,7 +63,7 @@ export default defineConfig({
       },
       {
         text: "Developer Tools & Resources",
-        collapsed: false,
+        collapsed: true,
         items: [
           { text: "Bridges", link: "/developer-tools/bridges" },
           { text: "Faucets", link: "/developer-tools/faucets" },
@@ -116,7 +118,7 @@ export default defineConfig({
           },
           {
             text: "Delegates",
-            collapsed: false,
+            collapsed: true,
             items: [
               {
                 text: "Delegate Overview",
