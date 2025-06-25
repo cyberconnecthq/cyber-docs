@@ -100,6 +100,13 @@ export default defineConfig({
               { text: 'Privy', link: '/developer-tools/account-abstraction/privy' },
             ],
           },
+          {
+            text: 'Data Indexers',
+            collapsed: true,
+            items: [
+              { text: 'SubQuery', link: '/developer-tools/indexers/subquery' },
+            ],
+          },
         ],
       },
       {
