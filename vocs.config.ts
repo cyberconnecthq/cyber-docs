@@ -73,6 +73,7 @@ export default defineConfig({
           { text: 'Uniswap', link: '/developer-tools/uniswap' },
           { text: 'Block Explorers', link: '/developer-tools/block-explorers' },
           { text: 'Node Providers', link: '/developer-tools/node-providers' },
+          { text: 'Indexers', link: '/developer-tools/indexers' },
           {
             text: 'Deployment & Client',
             collapsed: true,
